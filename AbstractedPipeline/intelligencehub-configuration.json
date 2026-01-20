@@ -1,0 +1,3302 @@
+{
+  "productInfo" : {
+    "company" : "HighByte",
+    "product" : "IntelligenceHub",
+    "version" : "4.2.1",
+    "build" : "2025.8.8.10",
+    "stage" : "Release"
+  },
+  "project" : {
+    "version" : 11,
+    "connections" : [ {
+      "name" : "mqtt",
+      "uri" : "mqtt://localhost:1885",
+      "tags" : [ "AbstractedPipeline", "starter_solution", "SourceNamespace" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "connectionTimeoutSeconds" : 10,
+        "keepAliveSeconds" : 60,
+        "requestTimeoutMS" : 5000,
+        "cleanSession" : true,
+        "clientId" : "mqtt",
+        "ssl" : false,
+        "redundantBrokers" : [ ],
+        "maxInflight" : 1000,
+        "inputDiscovery" : ""
+      }
+    }, {
+      "name" : "opc",
+      "uri" : "opc.tcp://52.10.6.4:49320",
+      "tags" : [ "starter_solution", "AbstractedPipeline", "InfluxTagsEmpty", "EventOpcToMqtt" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : {
+        "subscriptionRate" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "security" : "None",
+        "authentication" : {
+          "type" : "Anonymous"
+        },
+        "connectTimeoutSeconds" : 5,
+        "requestTimeoutMS" : 5000,
+        "maxItemsPerRead" : 512,
+        "maxItemsPerWrite" : 256,
+        "sessionName" : ""
+      }
+    }, {
+      "name" : "spb",
+      "uri" : "sparkplug://localhost:1885",
+      "tags" : [ "AbstractedPipeline" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "connectionTimeoutSeconds" : 10,
+        "keepAliveSeconds" : 60,
+        "requestTimeoutMS" : 5000,
+        "maxInflight" : 1000,
+        "ssl" : false,
+        "redundantBrokers" : [ ]
+      }
+    }, {
+      "name" : "sql",
+      "uri" : "jdbc.sqlserver://52.10.6.4:1433",
+      "tags" : [ "AbstractedPipeline", "TestOnChange", "starter_solution", "ExpandArray" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "database" : "serviceinfo",
+        "username" : "highbyte",
+        "strategy" : {
+          "type" : "default"
+        },
+        "connectString" : "password=password"
+      }
+    } ],
+    "inputs" : [ {
+      "name" : "spb",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "any",
+        "qos" : 0,
+        "topic" : "spBv1.0/HighByte IntelligenceHub/NDATA/hostname/#",
+        "includeTopic" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "spbplus",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "any",
+        "qos" : 0,
+        "topic" : "spBv1.0/+/DDATA/Area-1.Line-1/Motor002",
+        "includeTopic" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "test",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "json",
+        "qos" : 0,
+        "topic" : "#",
+        "includeTopic" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "wild",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "any",
+        "qos" : 0,
+        "topic" : "spBv1.0/#",
+        "includeTopic" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "wild_plus",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "any",
+        "qos" : 0,
+        "topic" : "spBv1.0/+/NBIRTH/#",
+        "includeTopic" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "BUILD2_ThermostatMultiple",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "BUILD2.ThermostatMultiple",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Fanuc",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Fanuc",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "FertilizerDemo_Line1",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "FertilizerDemo.Line1",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "maxDepth" : 10
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "INJECT1",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "INJECT1",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MTconnect",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "MTconnect",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MTconnect_Rackspace",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "MTconnect_Rackspace",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MachineFiller",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "MachineFiller",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor{{this.num}}.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : true,
+        "interval" : {
+          "duration" : 1,
+          "units" : "Days"
+        }
+      },
+      "template" : {
+        "type" : "Off",
+        "params" : [ {
+          "name" : "num",
+          "pattern" : "001-4"
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "num",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "002",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "Motor001_PLC_Amps",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor001.PLC.Amps",
+        "type" : "Tag",
+        "dataType" : "UInt32",
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        },
+        "isComplex" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001_PLC_Error",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor001.PLC.Error",
+        "type" : "Tag",
+        "dataType" : "String"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001_PLC_ID",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor001.PLC.ID",
+        "type" : "Tag",
+        "dataType" : "String"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001_PLC_Speed",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor001.PLC.Speed",
+        "type" : "Tag",
+        "dataType" : "UInt32"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001_PLC_Vibration",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor001.PLC.Vibration",
+        "type" : "Tag",
+        "dataType" : "Real64"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Motor001_PLC_metadata",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor{{this.motorNum}}.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "motorNum",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "002",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "MotorXXX_PLC_event",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetNum}}.PLC.{{this.metricName}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "name" : "{{this.assetNum}}_{{this.metricName}}",
+        "type" : "Static",
+        "params" : [ {
+          "name" : "assetNum",
+          "pattern" : "\"Motor003\""
+        }, {
+          "name" : "metricName",
+          "pattern" : "\"Vibration\""
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetNum",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Motor002",
+            "internalType" : "String"
+          }, {
+            "attributeType" : "Internal",
+            "name" : "metricName",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Amps",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "MotorXXX_PLC_event1",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Motor{{this.motorNum}}.PLC.{{this.metric}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : true,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Static",
+        "params" : [ {
+          "name" : "motorNum",
+          "pattern" : "001*5,002*5"
+        }, {
+          "name" : "metric",
+          "pattern" : "Amps,Error,Speed,Vibration,ID,Amps,Error,Speed,Vibration,ID"
+        } ]
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MotorXXX_PLC_event_metadata",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetNum}}.PLC.{{this.metricName}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : true,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "name" : "{{this.assetNum}}_{{this.metricName}}",
+        "type" : "Static",
+        "params" : [ {
+          "name" : "assetNum",
+          "pattern" : "\"Motor003\""
+        }, {
+          "name" : "metricName",
+          "pattern" : "\"Vibration\""
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetNum",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Motor002",
+            "internalType" : "String"
+          }, {
+            "attributeType" : "Internal",
+            "name" : "metricName",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Amps",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "MotorXXX_PLC_event_param",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetNum}}.PLC.{{this.metricName}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "name" : "{{this.assetNum}}_{{this.metricName}}",
+        "type" : "Static",
+        "params" : [ {
+          "name" : "assetNum",
+          "pattern" : "\"Motor003\""
+        }, {
+          "name" : "metricName",
+          "pattern" : "\"Vibration\""
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetNum",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Motor002",
+            "internalType" : "String"
+          }, {
+            "attributeType" : "Internal",
+            "name" : "metricName",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Amps",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "MotorXXX_PLC_event_param_blank",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetNum}}.PLC.{{this.metricName}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "name" : "{{this.assetNum}}_{{this.metricName}}",
+        "type" : "Off",
+        "params" : [ {
+          "name" : "assetNum",
+          "pattern" : "\"Motor003\""
+        }, {
+          "name" : "metricName",
+          "pattern" : "\"Vibration\""
+        } ]
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MotorXXX_PLC_template_event",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetId}}.PLC.{{this.metric}}",
+        "dataType" : "Auto",
+        "type" : "Tag",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : true,
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Static",
+        "params" : [ {
+          "name" : "assetId",
+          "pattern" : "Motor001*4,Motor002*4,Motor003*4,Motor004*4,Motor005*4"
+        }, {
+          "name" : "metric",
+          "pattern" : "Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error"
+        } ]
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MotorXXX_PLC_templated",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetId}}.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off",
+        "params" : [ {
+          "name" : "assetId",
+          "pattern" : "Motor001,Motor002,Motor003,Motor004,Motor005"
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetId",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Motor001",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "MotorXXX_PLC_templated2",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetId}}.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "name" : "{{this.assetId}}",
+        "type" : "Static",
+        "params" : [ {
+          "name" : "assetId",
+          "pattern" : "Motor001,Motor002,Motor003,Motor004,Motor005"
+        } ]
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "MotorXXX_branch",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "{{this.assetId}}.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false,
+        "interval" : {
+          "duration" : 1,
+          "units" : "Days"
+        }
+      },
+      "template" : {
+        "type" : "Off",
+        "params" : [ {
+          "name" : "num",
+          "pattern" : "001-4"
+        } ]
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetId",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "Motor004",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "PCS_DeltaV_Historian",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "PCS_DeltaV_Historian",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Packaging",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Packaging",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "ProductionLine",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "ProductionLine",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Pump001",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Pump001.PLC",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 0,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Siemens",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Siemens",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Simulator",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Simulator",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Simulator_PLC_Cell1_RejectedReason",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Simulator.PLC_Cell1.RejectedReason",
+        "type" : "Tag",
+        "dataType" : "Auto"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Tank001",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Tank001",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "Tutorial",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "Tutorial",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "browse",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "FertilizerDemo",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 10,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "gene_testing",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "gene_testing",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 1,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "read",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "type" : "Tag",
+        "identifierType" : "String",
+        "samplingInterval" : {
+          "duration" : 0,
+          "units" : "Seconds"
+        },
+        "namespaceIndex" : "2",
+        "identifier" : "{{this.tag}}"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "tag",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "rootInstanceGeneration",
+      "connection" : "opc",
+      "type" : "opc.tcp",
+      "qualifier" : {
+        "namespaceIndex" : 2,
+        "identifierType" : "String",
+        "identifier" : "FertilizerDemo",
+        "dataType" : "Auto",
+        "type" : "Branch",
+        "maxDepth" : 10,
+        "cacheInterval" : {
+          "duration" : 1,
+          "units" : "Hours"
+        },
+        "ignoreBadQuality" : false,
+        "browseVariableNodes" : false,
+        "isComplex" : false
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "PortlandArea1Line1",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "Portland",
+        "edgeNodeId" : "Area-1.Line-1",
+        "deviceId" : "Motor001",
+        "includeMetadata" : false,
+        "metricName" : "#"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "TestTimestamp",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "grp",
+        "edgeNodeId" : "eni",
+        "deviceId" : "devid123",
+        "metricName" : "#",
+        "includeMetadata" : true,
+        "includeProperties" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "motorId",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "test",
+        "edgeNodeId" : "time",
+        "metricName" : "motorId/a",
+        "includeProperties" : false,
+        "includeMetadata" : false,
+        "deviceId" : "dev"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "ndata",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "Portland",
+        "edgeNodeId" : "Area-1.Line-1",
+        "metricName" : "#",
+        "includeMetadata" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "qwe",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "#",
+        "edgeNodeId" : "#",
+        "deviceId" : "#",
+        "metricName" : "#"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "test",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "grp",
+        "edgeNodeId" : "eni",
+        "metricName" : "temperature",
+        "deviceId" : "devid123",
+        "includeMetadata" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "test_time_all",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "messageType" : "Data",
+        "groupId" : "{{this.grpid}}",
+        "edgeNodeId" : "{{this.eni}}",
+        "includeProperties" : false,
+        "includeMetadata" : false,
+        "deviceId" : "{{this.devid}}",
+        "metricName" : "{{this.metric}}"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Static",
+        "params" : [ {
+          "name" : "metric",
+          "pattern" : "met/sub/motorId"
+        }, {
+          "name" : "grpid",
+          "pattern" : "Portland"
+        }, {
+          "name" : "eni",
+          "pattern" : "\"Area-1.Line-1\""
+        }, {
+          "name" : "devid",
+          "pattern" : "Motor002"
+        } ]
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "get_motor001_service_info",
+      "connection" : "sql",
+      "type" : "jdbc.sqlserver",
+      "qualifier" : {
+        "type" : "query",
+        "query" : "SELECT * FROM [dbo].[lastservice] WHERE [dbo].[lastservice].[machineid] = 'motor001'",
+        "index" : {
+          "enabled" : false,
+          "indexName" : "",
+          "indexValue" : ""
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "get_motorxxx_service_info",
+      "connection" : "sql",
+      "type" : "jdbc.sqlserver",
+      "qualifier" : {
+        "type" : "query",
+        "query" : "SELECT * FROM [dbo].[lastservice] WHERE [dbo].[lastservice].[machineid] = '{{this.assetId}}'",
+        "index" : {
+          "enabled" : false,
+          "indexName" : "",
+          "indexValue" : ""
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetId",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "motor002",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "get_motorxxx_service_info_dyn",
+      "connection" : "sql",
+      "type" : "jdbc.sqlserver",
+      "qualifier" : {
+        "type" : "query",
+        "query" : "SELECT * FROM [dbo].[lastservice] WHERE [dbo].[lastservice].[machineid] = '{{this.assetId}}'",
+        "index" : {
+          "enabled" : false,
+          "indexName" : "",
+          "indexValue" : ""
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "assetId",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "motor002",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "get_tableName_service_info_copy",
+      "connection" : "sql",
+      "type" : "jdbc.sqlserver",
+      "qualifier" : {
+        "type" : "query",
+        "query" : "SELECT * FROM [dbo].[{{this.tableName}}]",
+        "index" : {
+          "enabled" : false,
+          "indexName" : "",
+          "indexValue" : ""
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "tableName",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : "lastservice",
+            "internalType" : "String"
+          } ]
+        }
+      }
+    } ],
+    "outputs" : [ {
+      "name" : "ndata",
+      "connection" : "spb",
+      "type" : "sparkplug",
+      "qualifier" : {
+        "deviceId" : "",
+        "messageType" : "Data",
+        "timestamp" : "",
+        "publishType" : "Tag",
+        "breakupArrays" : false,
+        "groupId" : "Portland",
+        "edgeNodeId" : "Area-1.Line-1",
+        "metricName" : "test"
+      }
+    } ],
+    "modeling" : {
+      "models" : [ {
+        "name" : "MotorSource",
+        "tags" : [ "AbstractedPipeline", "InfluxTagsEmpty", "EventOpcToMqtt" ],
+        "attributes" : [ {
+          "attributeType" : "Internal",
+          "name" : "assetId",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "amps",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "speed",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "vibration",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "id",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "error",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "sampledTime",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "sourceTimestamp",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        } ]
+      }, {
+        "name" : "MotorsNarrow",
+        "tags" : [ "starter_solution", "AbstractedPipeline" ],
+        "attributes" : [ {
+          "attributeType" : "Internal",
+          "name" : "motorId",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "site",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Portland",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "area",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Area-1",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "line",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Line-1",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "lastServiceDate",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "DateTime"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "lastServiceNotes",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "_timestamp",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "DateTime"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "datatype",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "value",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "metric",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        } ]
+      }, {
+        "name" : "MotorsWide",
+        "tags" : [ "starter_solution", "AbstractedPipeline" ],
+        "attributes" : [ {
+          "attributeType" : "Internal",
+          "name" : "motorId",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "site",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Portland",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "area",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Area-1",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "line",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "defaultValue" : "Line-1",
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "amps",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Real64"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "speed",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Real64"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "vibration",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Real64"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "error",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "String"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "lastServiceDate",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "DateTime"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "lastServiceNotes",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "String"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "_timestamp",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "DateTime"
+        } ]
+      }, {
+        "name" : "SqlSource",
+        "tags" : [ "AbstractedPipeline" ],
+        "attributes" : [ {
+          "attributeType" : "Internal",
+          "name" : "machineId",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "location",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "lastServiceDate",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "notes",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        } ]
+      } ],
+      "instances" : [ {
+        "name" : "MotorSource_Instance_Parameter",
+        "tags" : [ "AbstractedPipeline", "InfluxTagsEmpty" ],
+        "model" : "MotorSource",
+        "rootValueAs" : "Object",
+        "template" : {
+          "name" : "{{this.assetId}}",
+          "type" : "Off",
+          "params" : [ {
+            "name" : "assetIdTEST",
+            "pattern" : "Motor001,Motor002,Motor003"
+          } ]
+        },
+        "executeMode" : "V4",
+        "initExpression" : "",
+        "attributes" : [ {
+          "name" : "assetId",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return \"{{this.assetId}}\";"
+          }
+        }, {
+          "name" : "amps",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Amps",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "speed",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Speed",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "vibration",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Vibration",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "id",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          }
+        }, {
+          "name" : "error",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Error",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "sampledTime",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return {{System.Internal.DateTime}}.getTime()/1000"
+          }
+        }, {
+          "name" : "sourceTimestamp",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          }
+        } ],
+        "parameters" : {
+          "type" : "inline",
+          "model" : {
+            "name" : "params",
+            "tags" : [ ],
+            "attributes" : [ {
+              "attributeType" : "Internal",
+              "name" : "assetId",
+              "nullable" : false,
+              "required" : false,
+              "array" : false,
+              "defaultValue" : "Motor002",
+              "internalType" : "String"
+            } ]
+          }
+        }
+      }, {
+        "name" : "MotorSource_Instance_Templated",
+        "tags" : [ "AbstractedPipeline", "InfluxTagsEmpty" ],
+        "model" : "MotorSource",
+        "rootValueAs" : "Object",
+        "template" : {
+          "name" : "{{this.assetId}}",
+          "type" : "Static",
+          "params" : [ {
+            "name" : "assetId",
+            "pattern" : "Motor001,Motor002,Motor003,Motor004"
+          } ]
+        },
+        "executeMode" : "V4",
+        "initExpression" : "",
+        "attributes" : [ {
+          "name" : "assetId",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return \"{{this.assetId}}\";"
+          }
+        }, {
+          "name" : "amps",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Amps",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "speed",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Speed",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "vibration",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Vibration",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "id",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          }
+        }, {
+          "name" : "error",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "MotorXXX_PLC_templated",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ".Error",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "sampledTime",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return {{System.Internal.DateTime}}.getTime()/1000"
+          }
+        }, {
+          "name" : "sourceTimestamp",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          }
+        } ],
+        "parameters" : {
+          "type" : "EmptyParameters"
+        }
+      }, {
+        "name" : "SqlSource_Instance",
+        "tags" : [ "AbstractedPipeline" ],
+        "model" : "SqlSource",
+        "rootValueAs" : "Object",
+        "template" : {
+          "name" : "{{this.assetId}}",
+          "type" : "Off",
+          "params" : [ {
+            "name" : "test",
+            "pattern" : "123"
+          } ]
+        },
+        "executeMode" : "V4",
+        "initExpression" : "",
+        "attributes" : [ {
+          "name" : "machineId",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motorxxx_service_info",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : "[0].machineid",
+              "connectionName" : "sql"
+            }
+          }
+        }, {
+          "name" : "location",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motorxxx_service_info",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : "[0].location",
+              "connectionName" : "sql"
+            }
+          }
+        }, {
+          "name" : "lastServiceDate",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motorxxx_service_info",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : "[0].lastservicedate",
+              "connectionName" : "sql"
+            }
+          }
+        }, {
+          "name" : "notes",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motorxxx_service_info",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : "[0].Notes",
+              "connectionName" : "sql"
+            }
+          }
+        } ],
+        "parameters" : {
+          "type" : "inline",
+          "model" : {
+            "name" : "params",
+            "tags" : [ ],
+            "attributes" : [ {
+              "attributeType" : "Internal",
+              "name" : "assetId",
+              "nullable" : false,
+              "required" : false,
+              "array" : false,
+              "defaultValue" : "motor002",
+              "internalType" : "String"
+            } ]
+          }
+        }
+      }, {
+        "name" : "motor001",
+        "tags" : [ "starter_solution", "AbstractedPipeline" ],
+        "model" : "MotorsWide",
+        "rootValueAs" : "Object",
+        "template" : {
+          "type" : "Off"
+        },
+        "executeMode" : "V4",
+        "initExpression" : "",
+        "attributes" : [ {
+          "name" : "motorId",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          },
+          "defaultValue" : "Motor001"
+        }, {
+          "name" : "site",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          },
+          "defaultValue" : "Portland"
+        }, {
+          "name" : "area",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          },
+          "defaultValue" : "Area-1"
+        }, {
+          "name" : "line",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return {{Connection.opc.Motor001_PLC_Amps}} * {{Connection.opc.Motor001_PLC_Speed}};"
+          },
+          "defaultValue" : "Line-1"
+        }, {
+          "name" : "amps",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "Motor001_PLC_Amps",
+              "params" : { },
+              "path" : "",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "speed",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "Motor001_PLC_Speed",
+              "params" : { },
+              "path" : "",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "vibration",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "Motor001_PLC_Vibration",
+              "params" : { },
+              "path" : "",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "error",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "Motor001_PLC_Error",
+              "params" : { },
+              "path" : "",
+              "connectionName" : "opc"
+            }
+          }
+        }, {
+          "name" : "lastServiceDate",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motor001_service_info",
+              "params" : { },
+              "path" : "[0].lastservicedate",
+              "connectionName" : "sql"
+            }
+          }
+        }, {
+          "name" : "lastServiceNotes",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "get_motor001_service_info",
+              "params" : { },
+              "path" : "[0].Notes",
+              "connectionName" : "sql"
+            }
+          }
+        }, {
+          "name" : "_timestamp",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Empty",
+              "name" : "",
+              "params" : { },
+              "path" : ""
+            }
+          }
+        } ],
+        "parameters" : {
+          "type" : "EmptyParameters"
+        }
+      } ]
+    },
+    "conditions" : [ ],
+    "functions" : [ ],
+    "tags" : [ {
+      "name" : "AbstractedPipeline",
+      "description" : "PIpeline logic is decoupled from input data source schema by mapping into Instances first."
+    } ],
+    "pipelines" : [ {
+      "name" : "ErrorOperator",
+      "tags" : [ "AbstractedPipeline" ],
+      "inputStages" : [ "Transform" ],
+      "stages" : [ {
+        "name" : "Transform",
+        "display" : {
+          "position" : {
+            "x" : 339,
+            "y" : 2
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "stage.setValue(event.value);"
+        },
+        "outputs" : [ ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "CallableTrigger",
+        "display" : {
+          "position" : {
+            "x" : -472,
+            "y" : -1
+          }
+        },
+        "config" : {
+          "type" : ".TriggerCallable",
+          "enabled" : false,
+          "parameters" : {
+            "type" : "EmptyParameters"
+          }
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "default"
+      }
+    }, {
+      "name" : "motorXxxServiceRecords_api",
+      "description" : "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
+      "tags" : [ "AbstractedPipeline", "starter_solution", "mcp" ],
+      "inputStages" : [ "Switch" ],
+      "stages" : [ {
+        "name" : "DataProduct",
+        "display" : {
+          "position" : {
+            "x" : 2040,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".ModelConfig",
+          "model" : "MotorsWide",
+          "objectName" : "{{this.assetId}}",
+          "initExpression" : "",
+          "attributes" : [ {
+            "name" : "motorId",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.machineId;"
+            }
+          }, {
+            "name" : "site",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Site;"
+            }
+          }, {
+            "name" : "area",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Area;"
+            }
+          }, {
+            "name" : "line",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Line;"
+            }
+          }, {
+            "name" : "amps",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.amps;//event.metadata.filtered.amps;"
+            }
+          }, {
+            "name" : "speed",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.speed;//event.metadata.filtered.speed;"
+            }
+          }, {
+            "name" : "vibration",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.vibration;//.metadata.filtered.vibration;"
+            }
+          }, {
+            "name" : "error",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.error;//.metadata.filtered.error;"
+            }
+          }, {
+            "name" : "lastServiceDate",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.lastServiceDate;"
+            }
+          }, {
+            "name" : "lastServiceNotes",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.notes;"
+            }
+          }, {
+            "name" : "_timestamp",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "//return System.Internal.DateTime;"
+            }
+          } ]
+        },
+        "outputs" : [ "Return", "ViewEvent2", "MqttPublishEvent" ]
+      }, {
+        "name" : "Error_3",
+        "display" : {
+          "position" : {
+            "x" : 2040,
+            "y" : 67
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error {{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "OpcSingleParam",
+        "display" : {
+          "position" : {
+            "x" : 1140,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".ReadConfig",
+          "failureOutputs" : [ "Error_2" ],
+          "reference" : {
+            "type" : "Instance",
+            "name" : "MotorSource_Instance_Parameter",
+            "params" : {
+              "assetId" : "{{this.assetId}}"
+            },
+            "path" : ""
+          }
+        },
+        "outputs" : [ "GetSql_eventValue", "ViewEvent", "GetSql_eventName" ]
+      }, {
+        "name" : "Return",
+        "display" : {
+          "position" : {
+            "x" : 2490,
+            "y" : -202
+          }
+        },
+        "config" : {
+          "type" : ".ReturnConfig"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "MqttPublishEvent",
+        "display" : {
+          "position" : {
+            "x" : 2490,
+            "y" : 67
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.mqtt}}",
+          "qualifier" : {
+            "topic" : "Enterprise/Site/Area/Line/apiRequest/{{event.name}}",
+            "qos" : 0,
+            "namedRoot" : false,
+            "retained" : false,
+            "breakupArrays" : false
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Error_2",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : 135
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error {{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "GetSql_eventName",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".MergeReadConfig",
+          "failureOutputs" : [ "Error_3" ],
+          "keyReferences" : [ {
+            "location" : "inline",
+            "key" : "Source1",
+            "reference" : {
+              "type" : "Instance",
+              "name" : "SqlSource_Instance",
+              "params" : {
+                "assetId" : "{{event.name}}"
+              },
+              "path" : ""
+            }
+          } ],
+          "inputValueLocation" : "inline",
+          "inputValueKey" : "eventIn"
+        },
+        "outputs" : [ "DataProduct" ]
+      }, {
+        "name" : "ViewEvent",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : -135
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "stage.setValue(event);"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "ViewEvent2",
+        "display" : {
+          "position" : {
+            "x" : 2490,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "stage.setValue(event);"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "GetSql_eventValue",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : -270
+          }
+        },
+        "config" : {
+          "type" : ".MergeReadConfig",
+          "failureOutputs" : [ ],
+          "keyReferences" : [ {
+            "location" : "inline",
+            "key" : "Source1",
+            "reference" : {
+              "type" : "Instance",
+              "name" : "SqlSource_Instance",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ""
+            }
+          } ],
+          "inputValueLocation" : "inline",
+          "inputValueKey" : "eventIn"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "DefaultRequest",
+        "display" : {
+          "position" : {
+            "x" : 690,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "const eO = {\r\n\tassetId: \"Motor003\"\r\n};\r\nstage.setValue(eO);"
+        },
+        "outputs" : [ "OpcSingleParam" ]
+      }, {
+        "name" : "Switch",
+        "display" : {
+          "position" : {
+            "x" : 240,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".SwitchConfig",
+          "switchCases" : [ {
+            "expression" : "return Boolean(!event.value.assetId)",
+            "outputs" : [ "Default" ],
+            "description" : "Value Is True"
+          }, {
+            "expression" : "return true",
+            "outputs" : [ "DefaultRequest" ],
+            "description" : "Default"
+          } ],
+          "evaluationType" : "onFirst"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Default",
+        "display" : {
+          "position" : {
+            "x" : 690,
+            "y" : -242
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "stage.setValue(event.value);"
+        },
+        "outputs" : [ ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "APITrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TriggerApi",
+          "enabled" : false,
+          "parameters" : {
+            "type" : "inline",
+            "model" : {
+              "name" : "params",
+              "tags" : [ ],
+              "attributes" : [ {
+                "attributeType" : "Internal",
+                "name" : "assetId",
+                "nullable" : false,
+                "required" : false,
+                "array" : false,
+                "internalType" : "Any"
+              } ]
+            }
+          }
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "default"
+      }
+    }, {
+      "name" : "motorXxxServiceRecords_event",
+      "description" : "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
+      "tags" : [ "AbstractedPipeline", "starter_solution", "mcp" ],
+      "inputStages" : [ "ExtractParameter" ],
+      "stages" : [ {
+        "name" : "ExtractParameter",
+        "display" : {
+          "position" : {
+            "x" : 240,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "const fullString = event.metadata.source;\r\nconst startIndex = fullString.indexOf(\"(\") + 1;\r\nconst endIndex = fullString.lastIndexOf(\")\");\r\nconst extractedString = fullString.substring(startIndex, endIndex);\r\nconst resultObject = JSON.parse(extractedString);\r\nstage.setMetadata(\"parameters\",resultObject)"
+        },
+        "outputs" : [ "Model" ]
+      }, {
+        "name" : "MqttApi",
+        "display" : {
+          "position" : {
+            "x" : 2940,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.mqtt}}",
+          "qualifier" : {
+            "topic" : "event/Enterprise/Site/Area/Line/{{event.name}}",
+            "qos" : 0,
+            "namedRoot" : false,
+            "retained" : false,
+            "breakupArrays" : false
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Model",
+        "display" : {
+          "position" : {
+            "x" : 690,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".ModelConfig",
+          "model" : "MotorSource",
+          "objectName" : "{{event.metadata.parameters.assetId}}",
+          "initExpression" : "",
+          "attributes" : [ {
+            "name" : "assetId",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.metadata.parameters.assetId;"
+            }
+          }, {
+            "name" : "amps",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "if (event.metadata.parameters.metric===\"Amps\")\r\n  return event.value.value;"
+            }
+          }, {
+            "name" : "speed",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "if (event.metadata.parameters.metric===\"Speed\")\r\n  return event.value.value;"
+            }
+          }, {
+            "name" : "vibration",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "if (event.metadata.parameters.metric===\"Vibration\")\r\n  return event.value.value;"
+            }
+          }, {
+            "name" : "id",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "if (event.metadata.parameters.metric===\"ID\")\r\n  return event.value.value;"
+            }
+          }, {
+            "name" : "error",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "if (event.metadata.parameters.metric===\"Error\")\r\n  return event.value.value;"
+            }
+          }, {
+            "name" : "sampledTime",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Internal.DateTime.getTime();"
+            }
+          }, {
+            "name" : "sourceTimestamp",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value._tagTimestamp;"
+            }
+          } ]
+        },
+        "outputs" : [ "MergeRead" ]
+      }, {
+        "name" : "MergeRead_1",
+        "display" : {
+          "position" : {
+            "x" : 2040,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".MergeReadConfig",
+          "failureOutputs" : [ ],
+          "keyReferences" : [ {
+            "location" : "inline",
+            "key" : "SqlSource",
+            "reference" : {
+              "type" : "Instance",
+              "name" : "SqlSource_Instance",
+              "params" : {
+                "assetId" : "{{event.metadata.parameters.assetId}}"
+              },
+              "path" : ""
+            }
+          } ],
+          "inputValueLocation" : "inline",
+          "inputValueKey" : "OpcSource"
+        },
+        "outputs" : [ "DataProduct_1" ]
+      }, {
+        "name" : "DataProduct_1",
+        "display" : {
+          "position" : {
+            "x" : 2490,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".ModelConfig",
+          "model" : "MotorsWide",
+          "objectName" : "{{event.metadata.parameters.assetId}}",
+          "initExpression" : "",
+          "attributes" : [ {
+            "name" : "motorId",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.machineId;"
+            }
+          }, {
+            "name" : "site",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Site;"
+            }
+          }, {
+            "name" : "area",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Area;"
+            }
+          }, {
+            "name" : "line",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Line;"
+            }
+          }, {
+            "name" : "amps",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.amps;"
+            }
+          }, {
+            "name" : "speed",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.speed;"
+            }
+          }, {
+            "name" : "vibration",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.vibration;"
+            }
+          }, {
+            "name" : "error",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.error;"
+            }
+          }, {
+            "name" : "lastServiceDate",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.lastServiceDate;"
+            }
+          }, {
+            "name" : "lastServiceNotes",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.notes;"
+            }
+          }, {
+            "name" : "_timestamp",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Internal.DateTime;"
+            }
+          } ]
+        },
+        "outputs" : [ "MqttApi" ]
+      }, {
+        "name" : "MergeRead",
+        "display" : {
+          "position" : {
+            "x" : 1140,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".MergeReadConfig",
+          "failureOutputs" : [ ],
+          "keyReferences" : [ {
+            "location" : "child",
+            "key" : "Source1",
+            "reference" : {
+              "type" : "Instance",
+              "name" : "MotorSource_Instance_Parameter",
+              "params" : {
+                "assetId" : "{{event.metadata.parameters.assetId}}"
+              },
+              "path" : ""
+            }
+          } ],
+          "inputValueLocation" : "child",
+          "inputValueKey" : "eventIn"
+        },
+        "outputs" : [ "Transform" ]
+      }, {
+        "name" : "Transform",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TransformConfig",
+          "transformExpression" : "stage.setValue({...event.value.Source1, ...event.value.eventIn});"
+        },
+        "outputs" : [ "MergeRead_1" ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "EventTrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TriggerEvent",
+          "enabled" : true,
+          "reference" : "{{Connection.opc.MotorXXX_PLC_template_event}}"
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "default"
+      }
+    }, {
+      "name" : "motorXxxServiceRecords_template",
+      "description" : "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
+      "tags" : [ "AbstractedPipeline", "starter_solution", "mcp" ],
+      "inputStages" : [ "GetOpcBranch" ],
+      "stages" : [ {
+        "name" : "BreakupArray",
+        "display" : {
+          "position" : {
+            "x" : 690,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".BreakupConfig",
+          "breakupType" : "array"
+        },
+        "outputs" : [ "GetSql" ]
+      }, {
+        "name" : "Error_1",
+        "display" : {
+          "position" : {
+            "x" : 690,
+            "y" : 67
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error {{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "GetOpcBranch",
+        "display" : {
+          "position" : {
+            "x" : 240,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".ReadConfig",
+          "failureOutputs" : [ "Error_1" ],
+          "reference" : {
+            "type" : "Instance",
+            "name" : "MotorSource_Instance_Templated",
+            "params" : { },
+            "path" : ""
+          }
+        },
+        "outputs" : [ "BreakupArray" ]
+      }, {
+        "name" : "GetSql",
+        "display" : {
+          "position" : {
+            "x" : 1140,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".MergeReadConfig",
+          "failureOutputs" : [ "Error_3" ],
+          "keyReferences" : [ {
+            "location" : "inline",
+            "key" : "Source1",
+            "reference" : {
+              "type" : "Instance",
+              "name" : "SqlSource_Instance",
+              "params" : {
+                "assetId" : "{{this.assetId}}"
+              },
+              "path" : ""
+            }
+          } ],
+          "inputValueLocation" : "inline",
+          "inputValueKey" : "eventIn"
+        },
+        "outputs" : [ "DataProduct" ]
+      }, {
+        "name" : "DataProduct",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : -135
+          }
+        },
+        "config" : {
+          "type" : ".ModelConfig",
+          "model" : "MotorsWide",
+          "objectName" : "{{this.assetId}}",
+          "initExpression" : "",
+          "attributes" : [ {
+            "name" : "motorId",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.machineId;"
+            }
+          }, {
+            "name" : "site",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Site;"
+            }
+          }, {
+            "name" : "area",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Area;"
+            }
+          }, {
+            "name" : "line",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Variables.Line;"
+            }
+          }, {
+            "name" : "amps",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.amps;"
+            }
+          }, {
+            "name" : "speed",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.speed;"
+            }
+          }, {
+            "name" : "vibration",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.vibration;"
+            }
+          }, {
+            "name" : "error",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.error;"
+            }
+          }, {
+            "name" : "lastServiceDate",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.lastServiceDate;"
+            }
+          }, {
+            "name" : "lastServiceNotes",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return event.value.notes;"
+            }
+          }, {
+            "name" : "_timestamp",
+            "expression" : {
+              "type" : "JavaScript",
+              "expression" : "return System.Internal.DateTime;"
+            }
+          } ]
+        },
+        "outputs" : [ "Mqtt", "Sparkplug" ]
+      }, {
+        "name" : "Error_3",
+        "display" : {
+          "position" : {
+            "x" : 1590,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error {{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Mqtt",
+        "display" : {
+          "position" : {
+            "x" : 2040,
+            "y" : -202
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.mqtt}}",
+          "qualifier" : {
+            "qos" : 0,
+            "namedRoot" : false,
+            "retained" : false,
+            "breakupArrays" : false,
+            "topic" : "enterprise/{{this.site}}/{{this.area}}/{{this.line}}/{{this.motorId}}"
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Sparkplug",
+        "display" : {
+          "position" : {
+            "x" : 2040,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.spb}}",
+          "qualifier" : {
+            "messageType" : "Data",
+            "deviceId" : "{{this.motorId}}",
+            "timestamp" : "",
+            "publishType" : "Tag",
+            "breakupArrays" : false,
+            "groupId" : "{{this.site}}",
+            "edgeNodeId" : "{{this.area}}.{{this.line}}"
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "PolledTrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TriggerPolled",
+          "enabled" : true,
+          "interval" : {
+            "duration" : 10,
+            "units" : "Seconds"
+          }
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "external",
+        "reference" : "{{Pipeline.ErrorOperator}}"
+      }
+    } ],
+    "namespace" : [ ]
+  },
+  "network" : {
+    "groups" : [ ],
+    "hubs" : [ ]
+  }
+}
