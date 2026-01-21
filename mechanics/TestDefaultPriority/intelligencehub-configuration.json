@@ -2,8 +2,8 @@
 	"productInfo": {
 		"company": "HighByte",
 		"product": "IntelligenceHub",
-		"version": "4.3.3",
-		"build": "2026.1.5.1",
+		"version": "4.3.1",
+		"build": "2025.11.17.5",
 		"stage": "Release"
 	},
 	"project": {
@@ -62,7 +62,7 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChild",
+							"defaultValue": "modelChildDefault",
 							"internalType": "Any"
 						},
 						{
@@ -72,7 +72,7 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChild",
+							"defaultValue": "modelChildDefault",
 							"internalType": "Any"
 						},
 						{
@@ -82,7 +82,7 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChild",
+							"defaultValue": "modelChildDefault",
 							"internalType": "Any"
 						},
 						{
@@ -92,7 +92,7 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChild",
+							"defaultValue": "modelChildDefault",
 							"internalType": "Any"
 						}
 					]
@@ -147,14 +147,14 @@
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParent",
-								"childModel0InstanceDef0Ref1": "modelParent",
-								"childModel0InstanceDef1Ref0": "modelParent",
-								"childModel0InstanceDef1Ref1": "modelParent",
-								"childModel1InstanceDef0Ref0": "modelParent",
-								"childModel1InstanceDef0Ref1": "modelParent",
-								"childModel1InstanceDef1Ref0": "modelParent",
-								"childModel1InstanceDef1Ref1": "modelParent"
+								"childModel0InstanceDef0Ref0": "modelParentDefault",
+								"childModel0InstanceDef0Ref1": "modelParentDefault",
+								"childModel0InstanceDef1Ref0": "modelParentDefault",
+								"childModel0InstanceDef1Ref1": "modelParentDefault",
+								"childModel1InstanceDef0Ref0": "modelParentDefault",
+								"childModel1InstanceDef0Ref1": "modelParentDefault",
+								"childModel1InstanceDef1Ref0": "modelParentDefault",
+								"childModel1InstanceDef1Ref1": "modelParentDefault"
 							},
 							"model": "ChildModel"
 						},
@@ -166,14 +166,14 @@
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParent",
-								"childModel0InstanceDef0Ref1": "modelParent",
-								"childModel0InstanceDef1Ref0": "modelParent",
-								"childModel0InstanceDef1Ref1": "modelParent",
-								"childModel1InstanceDef0Ref0": "modelParent",
-								"childModel1InstanceDef0Ref1": "modelParent",
-								"childModel1InstanceDef1Ref0": "modelParent",
-								"childModel1InstanceDef1Ref1": "modelParent"
+								"childModel0InstanceDef0Ref0": "modelParentDefault",
+								"childModel0InstanceDef0Ref1": "modelParentDefault",
+								"childModel0InstanceDef1Ref0": "modelParentDefault",
+								"childModel0InstanceDef1Ref1": "modelParentDefault",
+								"childModel1InstanceDef0Ref0": "modelParentDefault",
+								"childModel1InstanceDef0Ref1": "modelParentDefault",
+								"childModel1InstanceDef1Ref0": "modelParentDefault",
+								"childModel1InstanceDef1Ref1": "modelParentDefault"
 							},
 							"model": "ChildModel"
 						},
@@ -185,14 +185,14 @@
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParent",
-								"childModel0InstanceDef0Ref1": "modelParent",
-								"childModel0InstanceDef1Ref0": "modelParent",
-								"childModel0InstanceDef1Ref1": "modelParent",
-								"childModel1InstanceDef0Ref0": "modelParent",
-								"childModel1InstanceDef0Ref1": "modelParent",
-								"childModel1InstanceDef1Ref0": "modelParent",
-								"childModel1InstanceDef1Ref1": "modelParent"
+								"childModel0InstanceDef0Ref0": "modelParentDefault",
+								"childModel0InstanceDef0Ref1": "modelParentDefault",
+								"childModel0InstanceDef1Ref0": "modelParentDefault",
+								"childModel0InstanceDef1Ref1": "modelParentDefault",
+								"childModel1InstanceDef0Ref0": "modelParentDefault",
+								"childModel1InstanceDef0Ref1": "modelParentDefault",
+								"childModel1InstanceDef1Ref0": "modelParentDefault",
+								"childModel1InstanceDef1Ref1": "modelParentDefault"
 							},
 							"model": "ChildModel"
 						},
@@ -204,704 +204,25 @@
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParent",
-								"childModel0InstanceDef0Ref1": "modelParent",
-								"childModel0InstanceDef1Ref0": "modelParent",
-								"childModel0InstanceDef1Ref1": "modelParent",
-								"childModel1InstanceDef0Ref0": "modelParent",
-								"childModel1InstanceDef0Ref1": "modelParent",
-								"childModel1InstanceDef1Ref0": "modelParent",
-								"childModel1InstanceDef1Ref1": "modelParent"
+								"childModel0InstanceDef0Ref0": "modelParentDefault",
+								"childModel0InstanceDef0Ref1": "modelParentDefault",
+								"childModel0InstanceDef1Ref0": "modelParentDefault",
+								"childModel0InstanceDef1Ref1": "modelParentDefault",
+								"childModel1InstanceDef0Ref0": "modelParentDefault",
+								"childModel1InstanceDef0Ref1": "modelParentDefault",
+								"childModel1InstanceDef1Ref0": "modelParentDefault",
+								"childModel1InstanceDef1Ref1": "modelParentDefault"
 							},
 							"model": "ChildModel"
 						}
 					]
 				}
 			],
-			"instances": [
-				{
-					"name": "ParentModel_Instance",
-					"tags": [
-						"TestDefaults"
-					],
-					"model": "ParentModel",
-					"rootValueAs": "Object",
-					"template": {
-						"type": "Off"
-					},
-					"executeMode": "V4",
-					"initExpression": "variables.parentRef = {\"childModel0InstanceDef0Ref0\":\"instanceParentRef\",\"childModel0InstanceDef0Ref1\":\"instanceParentRef\",\"childModel0InstanceDef1Ref0\":\"instanceParentRef\",\"childModel0InstanceDef1Ref1\":\"instanceParentRef\",\"childModel1InstanceDef0Ref0\":\"instanceParentRef\",\"childModel1InstanceDef0Ref1\":\"instanceParentRef\",\"childModel1InstanceDef1Ref0\":\"instanceParentRef\",\"childModel1InstanceDef1Ref1\":\"instanceParentRef\"}\r\nvariables.childRef = \"instanceChildRef\"",
-					"attributes": [
-						{
-							"name": "parentModel0InstanceDef0Ref0",
-							"expression": {
-								"type": "Reference",
-								"reference": {
-									"type": "Empty"
-								}
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel0InstanceDef0Ref1",
-							"expression": {
-								"type": "JavaScript",
-								"expression": "return variables.parentRef;"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel0InstanceDef1Ref0",
-							"expression": {
-								"type": "Reference",
-								"reference": {
-									"type": "Empty"
-								}
-							},
-							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "instanceParentDef",
-								"childModel0InstanceDef0Ref1": "instanceParentDef",
-								"childModel0InstanceDef1Ref0": "instanceParentDef",
-								"childModel0InstanceDef1Ref1": "instanceParentDef",
-								"childModel1InstanceDef0Ref0": "instanceParentDef",
-								"childModel1InstanceDef0Ref1": "instanceParentDef",
-								"childModel1InstanceDef1Ref0": "instanceParentDef",
-								"childModel1InstanceDef1Ref1": "instanceParentDef"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel0InstanceDef1Ref1",
-							"expression": {
-								"type": "JavaScript",
-								"expression": "return variables.parentRef;"
-							},
-							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "instanceParentDef",
-								"childModel0InstanceDef0Ref1": "instanceParentDef",
-								"childModel0InstanceDef1Ref0": "instanceParentDef",
-								"childModel0InstanceDef1Ref1": "instanceParentDef",
-								"childModel1InstanceDef0Ref0": "instanceParentDef",
-								"childModel1InstanceDef0Ref1": "instanceParentDef",
-								"childModel1InstanceDef1Ref0": "instanceParentDef",
-								"childModel1InstanceDef1Ref1": "instanceParentDef"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel1InstanceDef0Ref0",
-							"expression": {
-								"type": "JavaScript",
-								"expression": ""
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "JavaScript",
-										"expression": ""
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "JavaScript",
-										"expression": ""
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "JavaScript",
-										"expression": ""
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel1InstanceDef0Ref1",
-							"expression": {
-								"type": "JavaScript",
-								"expression": "return variables.parentRef;"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel1InstanceDef1Ref0",
-							"expression": {
-								"type": "Reference",
-								"reference": {
-									"type": "Empty"
-								}
-							},
-							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "instanceParentDef",
-								"childModel0InstanceDef0Ref1": "instanceParentDef",
-								"childModel0InstanceDef1Ref0": "instanceParentDef",
-								"childModel0InstanceDef1Ref1": "instanceParentDef",
-								"childModel1InstanceDef0Ref0": "instanceParentDef",
-								"childModel1InstanceDef0Ref1": "instanceParentDef",
-								"childModel1InstanceDef1Ref0": "instanceParentDef",
-								"childModel1InstanceDef1Ref1": "instanceParentDef"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						},
-						{
-							"name": "parentModel1InstanceDef1Ref1",
-							"expression": {
-								"type": "JavaScript",
-								"expression": "return variables.parentRef;"
-							},
-							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "instanceParentDef",
-								"childModel0InstanceDef0Ref1": "instanceParentDef",
-								"childModel0InstanceDef1Ref0": "instanceParentDef",
-								"childModel0InstanceDef1Ref1": "instanceParentDef",
-								"childModel1InstanceDef0Ref0": "instanceParentDef",
-								"childModel1InstanceDef0Ref1": "instanceParentDef",
-								"childModel1InstanceDef1Ref0": "instanceParentDef",
-								"childModel1InstanceDef1Ref1": "instanceParentDef"
-							},
-							"attributes": [
-								{
-									"name": "childModel0InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel0InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel0InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel0InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef0Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									}
-								},
-								{
-									"name": "childModel1InstanceDef0Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									}
-								},
-								{
-									"name": "childModel1InstanceDef1Ref0",
-									"expression": {
-										"type": "Reference",
-										"reference": {
-											"type": "Empty"
-										}
-									},
-									"defaultValue": "instanceChildDef"
-								},
-								{
-									"name": "childModel1InstanceDef1Ref1",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return variables.childRef;"
-									},
-									"defaultValue": "instanceChildDef"
-								}
-							]
-						}
-					],
-					"parameters": {
-						"type": "EmptyParameters"
-					}
-				}
-			]
+			"instances": []
 		},
 		"conditions": [],
 		"functions": [],
-		"tags": [
-			{
-				"name": "TestDefaults"
-			}
-		],
+		"tags": [],
 		"pipelines": [],
 		"namespace": []
 	},
