@@ -314,7 +314,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -322,7 +322,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -348,7 +348,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -356,7 +356,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -391,7 +391,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -399,7 +399,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -425,7 +425,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -433,7 +433,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -480,7 +480,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -488,7 +488,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -514,7 +514,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -522,7 +522,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -567,7 +567,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -575,7 +575,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -601,7 +601,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -609,7 +609,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -642,7 +642,7 @@
 										"type": "JavaScript",
 										"expression": ""
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -650,7 +650,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -672,7 +672,7 @@
 										"type": "JavaScript",
 										"expression": ""
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -680,7 +680,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -715,7 +715,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -723,7 +723,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -749,7 +749,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -757,7 +757,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -804,7 +804,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -812,7 +812,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -838,7 +838,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -846,7 +846,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						},
@@ -891,7 +891,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef0InstanceDef1Ref1",
@@ -899,7 +899,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef0Ref0",
@@ -925,7 +925,7 @@
 											"type": "Empty"
 										}
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								},
 								{
 									"name": "childModelDef1InstanceDef1Ref1",
@@ -933,7 +933,7 @@
 										"type": "JavaScript",
 										"expression": "return variables.childRef;"
 									},
-									"defaultValue": "instanceChildDef"
+									"defaultValue": "childInstanceDef"
 								}
 							]
 						}
@@ -2233,7 +2233,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2241,7 +2241,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2263,7 +2263,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2271,7 +2271,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2302,7 +2302,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2310,7 +2310,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2332,7 +2332,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2340,7 +2340,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2381,7 +2381,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2389,7 +2389,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2411,7 +2411,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2419,7 +2419,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2460,7 +2460,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2468,7 +2468,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2490,7 +2490,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2498,7 +2498,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2529,7 +2529,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2537,7 +2537,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2559,7 +2559,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2567,7 +2567,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2598,7 +2598,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2606,7 +2606,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2628,7 +2628,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2636,7 +2636,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2677,7 +2677,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2685,7 +2685,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2707,7 +2707,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2715,7 +2715,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								},
@@ -2756,7 +2756,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef0InstanceDef1Ref1",
@@ -2764,7 +2764,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef0Ref0",
@@ -2786,7 +2786,7 @@
 												"type": "JavaScript",
 												"expression": ""
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										},
 										{
 											"name": "childModelDef1InstanceDef1Ref1",
@@ -2794,7 +2794,7 @@
 												"type": "JavaScript",
 												"expression": "return variables.childRef;"
 											},
-											"defaultValue": "instanceChildDef"
+											"defaultValue": "childInstanceDef"
 										}
 									]
 								}
@@ -3438,7 +3438,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3446,7 +3446,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3468,7 +3468,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3476,7 +3476,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3507,7 +3507,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3515,7 +3515,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3537,7 +3537,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3545,7 +3545,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3586,7 +3586,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3594,7 +3594,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3616,7 +3616,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3624,7 +3624,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3665,7 +3665,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3673,7 +3673,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3695,7 +3695,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3703,7 +3703,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3734,7 +3734,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3742,7 +3742,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3764,7 +3764,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3772,7 +3772,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3803,7 +3803,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3811,7 +3811,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3833,7 +3833,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3841,7 +3841,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3882,7 +3882,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3890,7 +3890,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3912,7 +3912,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3920,7 +3920,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										},
@@ -3961,7 +3961,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef0InstanceDef1Ref1",
@@ -3969,7 +3969,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef0Ref0",
@@ -3991,7 +3991,7 @@
 														"type": "JavaScript",
 														"expression": ""
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												},
 												{
 													"name": "childModelDef1InstanceDef1Ref1",
@@ -3999,7 +3999,7 @@
 														"type": "JavaScript",
 														"expression": "return variables.childRef;"
 													},
-													"defaultValue": "instanceChildDef"
+													"defaultValue": "childInstanceDef"
 												}
 											]
 										}
