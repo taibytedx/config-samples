@@ -8,7 +8,40 @@
 	},
 	"project": {
 		"version": 12,
-		"connections": [],
+		"connections": [
+			{
+				"name": "mqtt",
+				"uri": "mqtt://localhost:1885",
+				"tags": [
+					"TestDefaults",
+					"starter_solution"
+				],
+				"writes": {
+					"flattenModeledValues": false
+				},
+				"subscriptions": {},
+				"storeForward": {
+					"enabled": false,
+					"maxEntries": 100,
+					"waitOnFailureInterval": {
+						"duration": 1,
+						"units": "Seconds"
+					}
+				},
+				"settings": {
+					"connectionTimeoutSeconds": 10,
+					"keepAliveSeconds": 60,
+					"requestTimeoutMS": 5000,
+					"cleanSession": true,
+					"clientId": "mqtt",
+					"ssl": false,
+					"redundantBrokers": [],
+					"maxInflight": 1000,
+					"inputDiscovery": "",
+					"mcpEnabled": "disabled"
+				}
+			}
+		],
 		"inputs": [],
 		"outputs": [],
 		"modeling": {
