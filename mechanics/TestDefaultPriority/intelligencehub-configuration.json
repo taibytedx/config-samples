@@ -2,8 +2,8 @@
 	"productInfo": {
 		"company": "HighByte",
 		"product": "IntelligenceHub",
-		"version": "4.3.1",
-		"build": "2025.11.17.5",
+		"version": "4.3.3",
+		"build": "2026.1.5.1",
 		"stage": "Release"
 	},
 	"project": {
@@ -21,7 +21,7 @@
 					"attributes": [
 						{
 							"attributeType": "Internal",
-							"name": "childModel0InstanceDef0Ref0",
+							"name": "childModelDef0InstanceDef0Ref0",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
@@ -30,7 +30,7 @@
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel0InstanceDef0Ref1",
+							"name": "childModelDef0InstanceDef0Ref1",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
@@ -39,7 +39,7 @@
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel0InstanceDef1Ref0",
+							"name": "childModelDef0InstanceDef1Ref0",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
@@ -48,7 +48,7 @@
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel0InstanceDef1Ref1",
+							"name": "childModelDef0InstanceDef1Ref1",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
@@ -57,42 +57,42 @@
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel1InstanceDef0Ref0",
+							"name": "childModelDef1InstanceDef0Ref0",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChildDefault",
+							"defaultValue": "childModelDef",
 							"internalType": "Any"
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel1InstanceDef0Ref1",
+							"name": "childModelDef1InstanceDef0Ref1",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChildDefault",
+							"defaultValue": "childModelDef",
 							"internalType": "Any"
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel1InstanceDef1Ref0",
+							"name": "childModelDef1InstanceDef1Ref0",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChildDefault",
+							"defaultValue": "childModelDef",
 							"internalType": "Any"
 						},
 						{
 							"attributeType": "Internal",
-							"name": "childModel1InstanceDef1Ref1",
+							"name": "childModelDef1InstanceDef1Ref1",
 							"description": "desc",
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"defaultValue": "modelChildDefault",
+							"defaultValue": "childModelDef",
 							"internalType": "Any"
 						}
 					]
@@ -105,7 +105,7 @@
 					"attributes": [
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel0InstanceDef0Ref0",
+							"name": "parentModelDef0InstanceDef0Ref0",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
@@ -114,7 +114,7 @@
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel0InstanceDef0Ref1",
+							"name": "parentModelDef0InstanceDef0Ref1",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
@@ -123,7 +123,7 @@
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel0InstanceDef1Ref0",
+							"name": "parentModelDef0InstanceDef1Ref0",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
@@ -132,7 +132,7 @@
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel0InstanceDef1Ref1",
+							"name": "parentModelDef0InstanceDef1Ref1",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
@@ -141,89 +141,3912 @@
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel1InstanceDef0Ref0",
+							"name": "parentModelDef1InstanceDef0Ref0",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParentDefault",
-								"childModel0InstanceDef0Ref1": "modelParentDefault",
-								"childModel0InstanceDef1Ref0": "modelParentDefault",
-								"childModel0InstanceDef1Ref1": "modelParentDefault",
-								"childModel1InstanceDef0Ref0": "modelParentDefault",
-								"childModel1InstanceDef0Ref1": "modelParentDefault",
-								"childModel1InstanceDef1Ref0": "modelParentDefault",
-								"childModel1InstanceDef1Ref1": "modelParentDefault"
+								"childModelDef0InstanceDef0Ref0": "parentModelDef",
+								"childModelDef0InstanceDef0Ref1": "parentModelDef",
+								"childModelDef0InstanceDef1Ref0": "parentModelDef",
+								"childModelDef0InstanceDef1Ref1": "parentModelDef",
+								"childModelDef1InstanceDef0Ref0": "parentModelDef",
+								"childModelDef1InstanceDef0Ref1": "parentModelDef",
+								"childModelDef1InstanceDef1Ref0": "parentModelDef",
+								"childModelDef1InstanceDef1Ref1": "parentModelDef"
 							},
 							"model": "ChildModel"
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel1InstanceDef0Ref1",
+							"name": "parentModelDef1InstanceDef0Ref1",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParentDefault",
-								"childModel0InstanceDef0Ref1": "modelParentDefault",
-								"childModel0InstanceDef1Ref0": "modelParentDefault",
-								"childModel0InstanceDef1Ref1": "modelParentDefault",
-								"childModel1InstanceDef0Ref0": "modelParentDefault",
-								"childModel1InstanceDef0Ref1": "modelParentDefault",
-								"childModel1InstanceDef1Ref0": "modelParentDefault",
-								"childModel1InstanceDef1Ref1": "modelParentDefault"
+								"childModelDef0InstanceDef0Ref0": "parentModelDef",
+								"childModelDef0InstanceDef0Ref1": "parentModelDef",
+								"childModelDef0InstanceDef1Ref0": "parentModelDef",
+								"childModelDef0InstanceDef1Ref1": "parentModelDef",
+								"childModelDef1InstanceDef0Ref0": "parentModelDef",
+								"childModelDef1InstanceDef0Ref1": "parentModelDef",
+								"childModelDef1InstanceDef1Ref0": "parentModelDef",
+								"childModelDef1InstanceDef1Ref1": "parentModelDef"
 							},
 							"model": "ChildModel"
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel1InstanceDef1Ref0",
+							"name": "parentModelDef1InstanceDef1Ref0",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParentDefault",
-								"childModel0InstanceDef0Ref1": "modelParentDefault",
-								"childModel0InstanceDef1Ref0": "modelParentDefault",
-								"childModel0InstanceDef1Ref1": "modelParentDefault",
-								"childModel1InstanceDef0Ref0": "modelParentDefault",
-								"childModel1InstanceDef0Ref1": "modelParentDefault",
-								"childModel1InstanceDef1Ref0": "modelParentDefault",
-								"childModel1InstanceDef1Ref1": "modelParentDefault"
+								"childModelDef0InstanceDef0Ref0": "parentModelDef",
+								"childModelDef0InstanceDef0Ref1": "parentModelDef",
+								"childModelDef0InstanceDef1Ref0": "parentModelDef",
+								"childModelDef0InstanceDef1Ref1": "parentModelDef",
+								"childModelDef1InstanceDef0Ref0": "parentModelDef",
+								"childModelDef1InstanceDef0Ref1": "parentModelDef",
+								"childModelDef1InstanceDef1Ref0": "parentModelDef",
+								"childModelDef1InstanceDef1Ref1": "parentModelDef"
 							},
 							"model": "ChildModel"
 						},
 						{
 							"attributeType": "Modeled",
-							"name": "parentModel1InstanceDef1Ref1",
+							"name": "parentModelDef1InstanceDef1Ref1",
 							"description": "parentdesc",
 							"nullable": false,
 							"required": false,
 							"array": false,
 							"defaultValue": {
-								"childModel0InstanceDef0Ref0": "modelParentDefault",
-								"childModel0InstanceDef0Ref1": "modelParentDefault",
-								"childModel0InstanceDef1Ref0": "modelParentDefault",
-								"childModel0InstanceDef1Ref1": "modelParentDefault",
-								"childModel1InstanceDef0Ref0": "modelParentDefault",
-								"childModel1InstanceDef0Ref1": "modelParentDefault",
-								"childModel1InstanceDef1Ref0": "modelParentDefault",
-								"childModel1InstanceDef1Ref1": "modelParentDefault"
+								"childModelDef0InstanceDef0Ref0": "parentModelDef",
+								"childModelDef0InstanceDef0Ref1": "parentModelDef",
+								"childModelDef0InstanceDef1Ref0": "parentModelDef",
+								"childModelDef0InstanceDef1Ref1": "parentModelDef",
+								"childModelDef1InstanceDef0Ref0": "parentModelDef",
+								"childModelDef1InstanceDef0Ref1": "parentModelDef",
+								"childModelDef1InstanceDef1Ref0": "parentModelDef",
+								"childModelDef1InstanceDef1Ref1": "parentModelDef"
 							},
 							"model": "ChildModel"
 						}
 					]
+				},
+				{
+					"name": "SuperParent",
+					"tags": [
+						"TestDefaults"
+					],
+					"attributes": [
+						{
+							"attributeType": "Modeled",
+							"name": "SuperParent",
+							"nullable": false,
+							"required": false,
+							"array": false,
+							"model": "ParentModel"
+						}
+					]
 				}
 			],
-			"instances": []
+			"instances": [
+				{
+					"name": "ParentModel_Instance",
+					"tags": [
+						"TestDefaults"
+					],
+					"model": "ParentModel",
+					"rootValueAs": "Object",
+					"template": {
+						"type": "Off"
+					},
+					"executeMode": "V4",
+					"initExpression": "variables.parentRef = {\r\n    \"childModelDef0InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref1\":\"parentInstanceRef\"\r\n};\r\nvariables.childRef = \"childInstanceRef\";",
+					"attributes": [
+						{
+							"name": "parentModelDef0InstanceDef0Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef0Ref1",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.parentRef;"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef1Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"defaultValue": {
+								"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef1Ref1",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.parentRef;"
+							},
+							"defaultValue": {
+								"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef0Ref0",
+							"expression": {
+								"type": "JavaScript",
+								"expression": ""
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef0Ref1",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.parentRef;"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef1Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"defaultValue": {
+								"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef1Ref1",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.parentRef;"
+							},
+							"defaultValue": {
+								"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+								"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									},
+									"defaultValue": "instanceChildDef"
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.childRef;"
+									},
+									"defaultValue": "instanceChildDef"
+								}
+							]
+						}
+					],
+					"parameters": {
+						"type": "EmptyParameters"
+					}
+				},
+				{
+					"name": "ParentModel_Instance_Empty",
+					"tags": [
+						"TestDefaults"
+					],
+					"model": "ParentModel",
+					"rootValueAs": "Object",
+					"template": {
+						"type": "Off"
+					},
+					"executeMode": "V4",
+					"initExpression": "",
+					"attributes": [
+						{
+							"name": "parentModelDef0InstanceDef0Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef0Ref1",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef1Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef0InstanceDef1Ref1",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef0Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef0Ref1",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef1Ref0",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						},
+						{
+							"name": "parentModelDef1InstanceDef1Ref1",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"attributes": [
+								{
+									"name": "childModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								},
+								{
+									"name": "childModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "Reference",
+										"reference": {
+											"type": "Empty"
+										}
+									}
+								}
+							]
+						}
+					],
+					"parameters": {
+						"type": "EmptyParameters"
+					}
+				}
+			]
 		},
 		"conditions": [],
 		"functions": [],
-		"tags": [],
-		"pipelines": [],
+		"tags": [
+			{
+				"name": "TestDefaults"
+			}
+		],
+		"pipelines": [
+			{
+				"name": "Test_DefaultPriority_Pipeline",
+				"tags": [
+					"TestDefaults"
+				],
+				"inputStages": [
+					"MqttTopicBranchPath"
+				],
+				"stages": [
+					{
+						"name": "SuperParentModelEmpty",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": -337
+							}
+						},
+						"config": {
+							"type": ".ModelConfig",
+							"model": "SuperParent",
+							"objectName": "SuperParentModel_ModelStage_Empty",
+							"initExpression": "",
+							"attributes": [
+								{
+									"name": "SuperParent",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "parentModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					},
+					{
+						"name": "ParentModel",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": -67
+							}
+						},
+						"config": {
+							"type": ".ModelConfig",
+							"model": "ParentModel",
+							"objectName": "ParentModel_ModelStage_Populated",
+							"initExpression": "variables.parentRef = {\r\n    \"childModelDef0InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref1\":\"parentInstanceRef\"\r\n};\r\nvariables.childRef = \"childInstanceRef\";",
+							"attributes": [
+								{
+									"name": "parentModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.parentRef;"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"defaultValue": {
+										"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.parentRef;"
+									},
+									"defaultValue": {
+										"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.parentRef;"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"defaultValue": {
+										"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return variables.parentRef;"
+									},
+									"defaultValue": {
+										"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+										"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": "instanceChildDef"
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.childRef;"
+											},
+											"defaultValue": "instanceChildDef"
+										}
+									]
+								}
+							]
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					},
+					{
+						"name": "Mqtt",
+						"display": {
+							"position": {
+								"x": 1140,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".DynamicWriteConfig",
+							"failureOutputs": [],
+							"connectionReference": "{{Connection.mqtt}}",
+							"qualifier": {
+								"topic": "{{event.metadata.rootTopicPath}}/{{event.name}}",
+								"qos": 0,
+								"namedRoot": false,
+								"retained": false,
+								"breakupArrays": false
+							},
+							"qualifierExpression": "",
+							"writeReturn": "ignore"
+						},
+						"outputs": []
+					},
+					{
+						"name": "ParentModelEmpty",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": 67
+							}
+						},
+						"config": {
+							"type": ".ModelConfig",
+							"model": "ParentModel",
+							"objectName": "ParentModel_ModelStage_Empty",
+							"initExpression": "",
+							"attributes": [
+								{
+									"name": "parentModelDef0InstanceDef0Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef0InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef0Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef0Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef1Ref0",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								},
+								{
+									"name": "parentModelDef1InstanceDef1Ref1",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "childModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										},
+										{
+											"name": "childModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											}
+										}
+									]
+								}
+							]
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					},
+					{
+						"name": "ReadInstanceEmpty",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": 202
+							}
+						},
+						"config": {
+							"type": ".ReadConfig",
+							"failureOutputs": [],
+							"reference": {
+								"type": "Instance",
+								"name": "ParentModel_Instance_Empty",
+								"path": "",
+								"params": {}
+							}
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					},
+					{
+						"name": "SuperParentModelPopulated",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": -200
+							}
+						},
+						"config": {
+							"type": ".ModelConfig",
+							"model": "SuperParent",
+							"objectName": "SuperParentModel_ModelStage_Populated",
+							"initExpression": "variables.parentRef = {\r\n    \"childModelDef0InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef0InstanceDef1Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef0Ref1\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref0\":\"parentInstanceRef\",\r\n    \"childModelDef1InstanceDef1Ref1\":\"parentInstanceRef\"\r\n};\r\nvariables.childRef = \"childInstanceRef\";",
+							"attributes": [
+								{
+									"name": "SuperParent",
+									"expression": {
+										"type": "JavaScript",
+										"expression": ""
+									},
+									"attributes": [
+										{
+											"name": "parentModelDef0InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.parentRef;"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": {
+												"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef0InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.parentRef;"
+											},
+											"defaultValue": {
+												"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef0Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef0Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.parentRef;"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef1Ref0",
+											"expression": {
+												"type": "JavaScript",
+												"expression": ""
+											},
+											"defaultValue": {
+												"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										},
+										{
+											"name": "parentModelDef1InstanceDef1Ref1",
+											"expression": {
+												"type": "JavaScript",
+												"expression": "return variables.parentRef;"
+											},
+											"defaultValue": {
+												"childModelDef0InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef0InstanceDef1Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef0Ref1": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref0": "parentInstanceDef",
+												"childModelDef1InstanceDef1Ref1": "parentInstanceDef"
+											},
+											"attributes": [
+												{
+													"name": "childModelDef0InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef0InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef0Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													}
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref0",
+													"expression": {
+														"type": "JavaScript",
+														"expression": ""
+													},
+													"defaultValue": "instanceChildDef"
+												},
+												{
+													"name": "childModelDef1InstanceDef1Ref1",
+													"expression": {
+														"type": "JavaScript",
+														"expression": "return variables.childRef;"
+													},
+													"defaultValue": "instanceChildDef"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					},
+					{
+						"name": "MqttTopicBranchPath",
+						"display": {
+							"position": {
+								"x": 240,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".JavaScriptTransformConfig",
+							"transformExpression": "stage.setMetadata(\"rootTopicPath\",\"test/defaultsPriority\");"
+						},
+						"outputs": [
+							"SuperParentModelEmpty",
+							"ReadInstanceEmpty",
+							"ReadInstancePopulated",
+							"ParentModel",
+							"ParentModelEmpty",
+							"SuperParentModelPopulated"
+						]
+					},
+					{
+						"name": "ReadInstancePopulated",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": 337
+							}
+						},
+						"config": {
+							"type": ".ReadConfig",
+							"failureOutputs": [],
+							"reference": {
+								"type": "Instance",
+								"name": "ParentModel_Instance",
+								"path": "",
+								"params": {}
+							}
+						},
+						"outputs": [
+							"Mqtt"
+						]
+					}
+				],
+				"trackActivity": true,
+				"triggers": [
+					{
+						"name": "PolledTrigger",
+						"display": {
+							"position": {
+								"x": -450,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".TriggerPolled",
+							"enabled": true,
+							"interval": {
+								"duration": 1,
+								"units": "Days"
+							}
+						}
+					}
+				],
+				"errorHandler": {
+					"type": "default"
+				}
+			}
+		],
 		"namespace": []
 	},
 	"network": {
