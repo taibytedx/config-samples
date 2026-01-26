@@ -1,0 +1,306 @@
+{
+  "productInfo" : {
+    "company" : "HighByte",
+    "product" : "IntelligenceHub",
+    "version" : "4.3.1",
+    "build" : "2025.11.17.5",
+    "stage" : "Release"
+  },
+  "project" : {
+    "version" : 12,
+    "connections" : [ {
+      "name" : "mqtt",
+      "uri" : "mqtt://localhost:1885",
+      "tags" : [ "AbstractedPipeline", "starter_solution", "SourceNamespace" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "connectionTimeoutSeconds" : 10,
+        "keepAliveSeconds" : 60,
+        "requestTimeoutMS" : 5000,
+        "cleanSession" : true,
+        "clientId" : "mqtt",
+        "ssl" : false,
+        "redundantBrokers" : [ ],
+        "maxInflight" : 1000,
+        "inputDiscovery" : ""
+      }
+    } ],
+    "inputs" : [ {
+      "name" : "OnChange",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "json",
+        "qos" : 0,
+        "topic" : "onchange",
+        "includeTopic" : true
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    }, {
+      "name" : "test",
+      "connection" : "mqtt",
+      "type" : "mqtt",
+      "qualifier" : {
+        "inputType" : "LastPublish",
+        "payloadType" : "json",
+        "qos" : 0,
+        "topic" : "#",
+        "includeTopic" : true,
+        "type" : "Tag"
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "EmptyParameters"
+      }
+    } ],
+    "outputs" : [ ],
+    "modeling" : {
+      "models" : [ ],
+      "instances" : [ ]
+    },
+    "conditions" : [ ],
+    "functions" : [ ],
+    "tags" : [ ],
+    "pipelines" : [ {
+      "name" : "FlowOnChange",
+      "tags" : [ ],
+      "inputStages" : [ "CheckTrigger" ],
+      "stages" : [ {
+        "name" : "Switch",
+        "display" : {
+          "position" : {
+            "x" : 1126,
+            "y" : -20
+          }
+        },
+        "config" : {
+          "type" : ".SwitchConfig",
+          "switchCases" : [ {
+            "expression" : "return Boolean(event.value.value.value===\"ON\")",
+            "outputs" : [ "ON" ],
+            "description" : "ON"
+          }, {
+            "expression" : "return Boolean(event.value.value.value===\"OFF\")",
+            "outputs" : [ "OFF" ],
+            "description" : "OFF"
+          }, {
+            "expression" : "return true",
+            "outputs" : [ "Error" ],
+            "description" : "Default"
+          } ],
+          "evaluationType" : "onFirst"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "OnChange",
+        "display" : {
+          "position" : {
+            "x" : 689,
+            "y" : -68
+          }
+        },
+        "config" : {
+          "type" : ".OnChangeConfig",
+          "outputMode" : "changed",
+          "persistMode" : "memory",
+          "keyExpression" : "stage.setBufferKey(null);",
+          "inclusionList" : [ ],
+          "metadataKey" : "bufferKey",
+          "trackChanges" : [ "value.value" ],
+          "ignoreChanges" : [ ]
+        },
+        "outputs" : [ "Switch" ]
+      }, {
+        "name" : "CheckTrigger",
+        "display" : {
+          "position" : {
+            "x" : 240,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".SwitchConfig",
+          "switchCases" : [ {
+            "expression" : "return Boolean(event.metadata.parameters?.trigger === \"flow\")",
+            "outputs" : [ "FlowTriggerLogic" ],
+            "description" : "FlowTrigger"
+          }, {
+            "expression" : "return Boolean(event.metadata.source === \"Connection.mqtt.OnChange\")",
+            "outputs" : [ "OnChange" ],
+            "description" : "EventTrigger"
+          }, {
+            "expression" : "return Boolean(event.value.type === \"sample\")",
+            "outputs" : [ "SamplePayload" ],
+            "description" : "Debug/Test Write"
+          }, {
+            "expression" : "return true",
+            "outputs" : [ "Error_1" ],
+            "description" : "Default"
+          } ],
+          "evaluationType" : "onFirst"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Error_1",
+        "display" : {
+          "position" : {
+            "x" : 677,
+            "y" : 288
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error: Trigger not handled\n{{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "Error",
+        "display" : {
+          "position" : {
+            "x" : 1632,
+            "y" : 122
+          }
+        },
+        "config" : {
+          "type" : ".ErrorConfig",
+          "errorMessage" : "Error: unexpected value\n{{event}}"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "ON",
+        "display" : {
+          "position" : {
+            "x" : 1601,
+            "y" : -171
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "stage.setValue(event.value);"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "OFF",
+        "display" : {
+          "position" : {
+            "x" : 1620,
+            "y" : -5
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "stage.setValue(event.value);"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "FlowTriggerLogic",
+        "display" : {
+          "position" : {
+            "x" : 693,
+            "y" : -226
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "stage.setValue(event.value);"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "SamplePayload",
+        "display" : {
+          "position" : {
+            "x" : 682,
+            "y" : 77
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "const payload = {\r\n\ttype: \"sample\",\r\n\tsample: Math.random(),\r\n    \"_topic\": \"sample\",\r\n    \"value\":{\r\n        \"value\":Math.random() >= 0.5 ? 'ON' : 'OFF'\r\n    }\r\n};\r\nstage.setValue(payload);"
+        },
+        "outputs" : [ "OnChange" ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "FlowTrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : 67
+          }
+        },
+        "config" : {
+          "type" : ".TriggerFlow",
+          "enabled" : true,
+          "flowEvaluation" : {
+            "type" : "Exception",
+            "interval" : {
+              "duration" : 1,
+              "units" : "Days"
+            },
+            "mode" : "OnTrue",
+            "expression" : "Boolean({{Connection.mqtt.OnChange}}.value.value === \"ON\")",
+            "delay" : {
+              "duration" : 0,
+              "units" : "Seconds"
+            }
+          },
+          "inReferences" : [ "{{Connection.mqtt.OnChange}}" ],
+          "publishMode" : "All",
+          "template" : {
+            "type" : "Static",
+            "params" : [ {
+              "name" : "trigger",
+              "pattern" : "flow"
+            } ]
+          }
+        }
+      }, {
+        "name" : "EventTrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : -67
+          }
+        },
+        "config" : {
+          "type" : ".TriggerEvent",
+          "enabled" : true,
+          "reference" : "{{Connection.mqtt.OnChange}}"
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "default"
+      }
+    } ],
+    "namespace" : [ ]
+  },
+  "network" : {
+    "groups" : [ ],
+    "hubs" : [ ]
+  }
+}
