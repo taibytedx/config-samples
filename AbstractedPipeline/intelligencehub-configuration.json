@@ -42,39 +42,6 @@
 				}
 			},
 			{
-				"name": "mqtt_copy",
-				"uri": "mqtt://localhost:1885",
-				"tags": [
-					"AbstractedPipeline",
-					"SourceNamespace",
-					"starter_solution"
-				],
-				"writes": {
-					"flattenModeledValues": false
-				},
-				"subscriptions": {},
-				"storeForward": {
-					"enabled": false,
-					"maxEntries": 100,
-					"waitOnFailureInterval": {
-						"duration": 1,
-						"units": "Seconds"
-					}
-				},
-				"settings": {
-					"connectionTimeoutSeconds": 10,
-					"keepAliveSeconds": 60,
-					"requestTimeoutMS": 5000,
-					"cleanSession": true,
-					"clientId": "mqtt",
-					"ssl": false,
-					"redundantBrokers": [],
-					"maxInflight": 1000,
-					"inputDiscovery": "",
-					"mcpEnabled": "disabled"
-				}
-			},
-			{
 				"name": "opc",
 				"uri": "opc.tcp://52.10.6.4:49320",
 				"tags": [
@@ -2747,6 +2714,77 @@
 					}
 				},
 				{
+					"name": "SqlSource_Instance_CachedTable_init",
+					"tags": [
+						"AbstractedPipeline"
+					],
+					"model": "SqlSource",
+					"rootValueAs": "Object",
+					"template": {
+						"name": "{{this.assetId}}",
+						"type": "Off",
+						"params": [
+							{
+								"name": "test",
+								"pattern": "123"
+							}
+						]
+					},
+					"executeMode": "V4",
+					"initExpression": "var rawArray = {{Connection.sql.get_motorxxx_service_info_all}}\r\nvar objectOut = {}\r\n\r\n// Iterate each object in the array\r\nfor (const tag of rawArray){\r\n\r\n    // Get the tag name\r\n    let tagName = tag[\"machineid\"]\r\n    \r\n    // Add the tag to the object, using the name as the key\r\n    objectOut[tagName] = tag\r\n    \r\n    // Delete the name field\r\n    delete objectOut[tagName][\"machineid\"]\r\n}\r\n\r\n// Return the object\r\nvariables.x = objectOut\r\n",
+					"attributes": [
+						{
+							"name": "SOURCE_machineId",
+							"expression": {
+								"type": "Reference",
+								"reference": {
+									"type": "Empty"
+								}
+							},
+							"defaultValue": "{{this.assetId}}"
+						},
+						{
+							"name": "SOURCE_location",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.x.{{this.assetId}}.location; "
+							}
+						},
+						{
+							"name": "SOURCE_lastServiceDate",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.x.{{this.assetId}}.lastservicedate;"
+							}
+						},
+						{
+							"name": "SOURCE_notes",
+							"expression": {
+								"type": "JavaScript",
+								"expression": "return variables.x.{{this.assetId}}.Notes;"
+							}
+						}
+					],
+					"parameters": {
+						"type": "inline",
+						"model": {
+							"name": "params",
+							"tags": [],
+							"attributes": [
+								{
+									"attributeType": "Internal",
+									"name": "assetId",
+									"nullable": false,
+									"required": false,
+									"array": false,
+									"defaultValue": "Motor002",
+									"internalType": "String"
+								}
+							]
+						}
+					}
+				},
+				{
 					"name": "motor001",
 					"tags": [
 						"AbstractedPipeline",
@@ -2894,7 +2932,21 @@
 				}
 			]
 		},
-		"conditions": [],
+		"conditions": [
+			{
+				"name": "ArrayToNamedObject",
+				"uri": "condition.custom",
+				"tags": [
+					"AbstractedPipeline"
+				],
+				"settings": {
+					"inReferences": [
+						"{{Connection.sql.get_motorxxx_service_info_all}}"
+					],
+					"expression": "var rawArray = {{this.currentValue}}\r\nvar objectOut = {}\r\n\r\n// Iterate each object in the array\r\nfor (const tag of rawArray){\r\n\r\n    // Get the tag name\r\n    let tagName = tag[\"machineid\"]\r\n    \r\n    // Add the tag to the object, using the name as the key\r\n    objectOut[tagName] = tag\r\n    \r\n    // Delete the name field\r\n    delete objectOut[tagName][\"machineid\"]\r\n}\r\n\r\n// Return the object\r\nobjectOut\r\n"
+				}
+			}
+		],
 		"functions": [],
 		"tags": [
 			{
@@ -3952,6 +4004,297 @@
 						"config": {
 							"type": ".TriggerPolled",
 							"enabled": true,
+							"interval": {
+								"duration": 10,
+								"units": "Seconds"
+							}
+						}
+					}
+				],
+				"errorHandler": {
+					"type": "external",
+					"reference": "{{Pipeline.ErrorOperator}}"
+				}
+			},
+			{
+				"name": "motorXxxServiceRecords_template_batch",
+				"description": "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
+				"tags": [
+					"AbstractedPipeline",
+					"starter_solution",
+					"mcp"
+				],
+				"inputStages": [
+					"GetOpcBranch"
+				],
+				"stages": [
+					{
+						"name": "BreakupArray",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": -67
+							}
+						},
+						"config": {
+							"type": ".BreakupConfig",
+							"breakupType": "array",
+							"depth": 1
+						},
+						"outputs": [
+							"GetSql"
+						]
+					},
+					{
+						"name": "Error_1",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": 67
+							}
+						},
+						"config": {
+							"type": ".ErrorConfig",
+							"errorMessage": "Error {{event}}"
+						},
+						"outputs": []
+					},
+					{
+						"name": "GetOpcBranch",
+						"display": {
+							"position": {
+								"x": 240,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".ReadConfig",
+							"failureOutputs": [
+								"Error_1"
+							],
+							"reference": {
+								"type": "Instance",
+								"name": "MotorSource_Instance_Templated",
+								"path": "",
+								"params": {}
+							}
+						},
+						"outputs": [
+							"BreakupArray"
+						]
+					},
+					{
+						"name": "GetSql",
+						"display": {
+							"position": {
+								"x": 1140,
+								"y": -67
+							}
+						},
+						"config": {
+							"type": ".MergeReadConfig",
+							"failureOutputs": [
+								"Error_3"
+							],
+							"keyReferences": [
+								{
+									"location": "inline",
+									"key": "Source1",
+									"reference": {
+										"type": "Instance",
+										"name": "SqlSource_Instance",
+										"path": "",
+										"params": {
+											"assetId": "{{event.value.SOURCE_assetId}}"
+										}
+									}
+								}
+							],
+							"inputValueLocation": "inline",
+							"inputValueKey": "eventIn"
+						},
+						"outputs": [
+							"DataProduct"
+						]
+					},
+					{
+						"name": "DataProduct",
+						"display": {
+							"position": {
+								"x": 1590,
+								"y": -135
+							}
+						},
+						"config": {
+							"type": ".ModelConfig",
+							"model": "MotorsWide",
+							"objectName": "{{this.assetId}}",
+							"initExpression": "",
+							"attributes": [
+								{
+									"name": "PRODUCT_motorId",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_machineId;"
+									}
+								},
+								{
+									"name": "PRODUCT_site",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return System.Variables.Site;"
+									}
+								},
+								{
+									"name": "PRODUCT_area",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return System.Variables.Area;"
+									}
+								},
+								{
+									"name": "PRODUCT_line",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return System.Variables.Line;"
+									}
+								},
+								{
+									"name": "PRODUCT_amps",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_amps;"
+									}
+								},
+								{
+									"name": "PRODUCT_speed",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_speed;"
+									}
+								},
+								{
+									"name": "PRODUCT_vibration",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_vibration;"
+									}
+								},
+								{
+									"name": "PRODUCT_error",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_error;"
+									}
+								},
+								{
+									"name": "PRODUCT_lastServiceDate",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_lastServiceDate;"
+									}
+								},
+								{
+									"name": "PRODUCT_lastServiceNotes",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return event.value.SOURCE_notes;"
+									}
+								},
+								{
+									"name": "_timestamp",
+									"expression": {
+										"type": "JavaScript",
+										"expression": "return System.Internal.DateTime;"
+									}
+								}
+							]
+						},
+						"outputs": [
+							"Mqtt",
+							"Sparkplug"
+						]
+					},
+					{
+						"name": "Error_3",
+						"display": {
+							"position": {
+								"x": 1590,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".ErrorConfig",
+							"errorMessage": "Error {{event}}"
+						},
+						"outputs": []
+					},
+					{
+						"name": "Mqtt",
+						"display": {
+							"position": {
+								"x": 2040,
+								"y": -202
+							}
+						},
+						"config": {
+							"type": ".DynamicWriteConfig",
+							"failureOutputs": [],
+							"connectionReference": "{{Connection.mqtt}}",
+							"qualifier": {
+								"qos": 0,
+								"namedRoot": false,
+								"retained": false,
+								"breakupArrays": false,
+								"topic": "enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
+								"type": "Tag"
+							},
+							"qualifierExpression": "",
+							"writeReturn": "ignore"
+						},
+						"outputs": []
+					},
+					{
+						"name": "Sparkplug",
+						"display": {
+							"position": {
+								"x": 2040,
+								"y": -67
+							}
+						},
+						"config": {
+							"type": ".DynamicWriteConfig",
+							"failureOutputs": [],
+							"connectionReference": "{{Connection.spb}}",
+							"qualifier": {
+								"messageType": "Data",
+								"deviceId": "{{this.PRODUCT_motorId}}",
+								"timestamp": "",
+								"publishType": "Tag",
+								"breakupArrays": false,
+								"groupId": "{{this.PRODUCT_site}}",
+								"edgeNodeId": "{{this.PRODUCT_area}}.{{this.PRODUCT_line}}",
+								"type": "Tag"
+							},
+							"qualifierExpression": "",
+							"writeReturn": "ignore"
+						},
+						"outputs": []
+					}
+				],
+				"trackActivity": true,
+				"triggers": [
+					{
+						"name": "PolledTrigger",
+						"display": {
+							"position": {
+								"x": -450,
+								"y": 0
+							}
+						},
+						"config": {
+							"type": ".TriggerPolled",
+							"enabled": false,
 							"interval": {
 								"duration": 10,
 								"units": "Seconds"
