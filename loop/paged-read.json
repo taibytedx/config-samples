@@ -1,0 +1,675 @@
+{
+  "productInfo" : {
+    "company" : "HighByte",
+    "product" : "IntelligenceHub",
+    "version" : "4.3.3",
+    "build" : "2026.1.5.1",
+    "stage" : "Release"
+  },
+  "project" : {
+    "version" : 12,
+    "connections" : [ {
+      "name" : "HB_Pi_PipelineUse",
+      "uri" : "osisoft.afsdk://3.18.152.186:45290",
+      "tags" : [ "MqttToPiFloatType" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "connectTimeoutSeconds" : 5,
+        "requestTimeoutMS" : 30000,
+        "compression" : "NONE",
+        "auth" : {
+          "type" : "credentials",
+          "username" : "osisoft",
+          "password" : {
+            "type" : "Encrypted",
+            "value" : {
+              "keyId" : "jNTR/2jiSip/7modVNtyRQ==",
+              "iv" : "S2xhnWlG45hdTTgPkjd3Ug==",
+              "ciphertext" : "ZfZUjv6jPq77zn5A5BWVIQ=="
+            }
+          }
+        },
+        "password" : {
+          "type" : "Encrypted",
+          "value" : {
+            "keyId" : "jNTR/2jiSip/7modVNtyRQ==",
+            "iv" : "H67FL2U+yVnZjv/02apnHQ==",
+            "ciphertext" : "fM5NK3c3nWn1VLF4tvFyk9ZaAyGYJWTn/MYTo9FP2JWJ8ELQEO80N+MTPuhumof8"
+          }
+        }
+      }
+    }, {
+      "name" : "HB_Pi_PipelineUse2",
+      "uri" : "osisoft.afsdk://3.18.152.186:45290",
+      "tags" : [ "MqttToPiFloatType" ],
+      "writes" : {
+        "flattenModeledValues" : false
+      },
+      "subscriptions" : { },
+      "storeForward" : {
+        "enabled" : false,
+        "maxEntries" : 100,
+        "waitOnFailureInterval" : {
+          "duration" : 1,
+          "units" : "Seconds"
+        }
+      },
+      "settings" : {
+        "connectTimeoutSeconds" : 5,
+        "requestTimeoutMS" : 30000,
+        "compression" : "NONE",
+        "auth" : {
+          "type" : "credentials",
+          "username" : "osisoft",
+          "password" : {
+            "type" : "Encrypted",
+            "value" : {
+              "keyId" : "jNTR/2jiSip/7modVNtyRQ==",
+              "iv" : "S2xhnWlG45hdTTgPkjd3Ug==",
+              "ciphertext" : "ZfZUjv6jPq77zn5A5BWVIQ=="
+            }
+          }
+        },
+        "password" : {
+          "type" : "Encrypted",
+          "value" : {
+            "keyId" : "jNTR/2jiSip/7modVNtyRQ==",
+            "iv" : "H67FL2U+yVnZjv/02apnHQ==",
+            "ciphertext" : "fM5NK3c3nWn1VLF4tvFyk9ZaAyGYJWTn/MYTo9FP2JWJ8ELQEO80N+MTPuhumof8"
+          }
+        }
+      }
+    } ],
+    "inputs" : [ {
+      "name" : "test",
+      "connection" : "HB_Pi_PipelineUse",
+      "type" : "osisoft.afsdk",
+      "qualifier" : {
+        "type" : "eventframe",
+        "options" : {
+          "get" : "currentValue",
+          "includeMetaData" : false,
+          "includeChildren" : true,
+          "paging" : true,
+          "startIndex" : "{{this.pageIndex}}",
+          "database" : "HighByte",
+          "query" : "*",
+          "index" : false,
+          "indexWindow" : "",
+          "pageSize" : "1"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "pageIndex",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : 0,
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "test_copy",
+      "connection" : "HB_Pi_PipelineUse",
+      "type" : "osisoft.afsdk",
+      "qualifier" : {
+        "type" : "eventframe",
+        "options" : {
+          "get" : "currentValue",
+          "includeMetaData" : false,
+          "includeChildren" : false,
+          "paging" : true,
+          "startIndex" : "0",
+          "database" : "HighByte",
+          "query" : "*",
+          "index" : false,
+          "indexWindow" : "",
+          "pageSize" : "0"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "pageIndex",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : 0,
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "test",
+      "connection" : "HB_Pi_PipelineUse2",
+      "type" : "osisoft.afsdk",
+      "qualifier" : {
+        "type" : "eventframe",
+        "options" : {
+          "get" : "currentValue",
+          "includeMetaData" : false,
+          "includeChildren" : true,
+          "paging" : true,
+          "database" : "HighByte",
+          "query" : "*",
+          "index" : false,
+          "indexWindow" : "",
+          "pageSize" : "{{this.pageSize}}",
+          "startIndex" : "{{this.pageIndex}}"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "pageIndex",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : 0,
+            "internalType" : "String"
+          }, {
+            "attributeType" : "Internal",
+            "name" : "pageSize",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : 1,
+            "internalType" : "String"
+          } ]
+        }
+      }
+    }, {
+      "name" : "test_copy",
+      "connection" : "HB_Pi_PipelineUse2",
+      "type" : "osisoft.afsdk",
+      "qualifier" : {
+        "type" : "eventframe",
+        "options" : {
+          "get" : "currentValue",
+          "includeMetaData" : false,
+          "includeChildren" : false,
+          "paging" : true,
+          "startIndex" : "0",
+          "database" : "HighByte",
+          "query" : "*",
+          "index" : false,
+          "indexWindow" : "",
+          "pageSize" : "0"
+        }
+      },
+      "cacheLifetime" : {
+        "enabled" : false
+      },
+      "template" : {
+        "type" : "Off"
+      },
+      "parameters" : {
+        "type" : "inline",
+        "model" : {
+          "name" : "params",
+          "tags" : [ ],
+          "attributes" : [ {
+            "attributeType" : "Internal",
+            "name" : "pageIndex",
+            "nullable" : false,
+            "required" : false,
+            "array" : false,
+            "defaultValue" : 0,
+            "internalType" : "String"
+          } ]
+        }
+      }
+    } ],
+    "outputs" : [ ],
+    "modeling" : {
+      "models" : [ {
+        "name" : "StageReads",
+        "tags" : [ ],
+        "attributes" : [ {
+          "attributeType" : "Internal",
+          "name" : "payload",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        }, {
+          "attributeType" : "Internal",
+          "name" : "param",
+          "nullable" : false,
+          "required" : false,
+          "array" : false,
+          "internalType" : "Any"
+        } ]
+      } ],
+      "instances" : [ {
+        "name" : "StageReads_Instance",
+        "tags" : [ ],
+        "model" : "StageReads",
+        "rootValueAs" : "Object",
+        "template" : {
+          "type" : "Off"
+        },
+        "executeMode" : "V4",
+        "initExpression" : "",
+        "attributes" : [ {
+          "name" : "payload",
+          "expression" : {
+            "type" : "Reference",
+            "reference" : {
+              "type" : "Input",
+              "name" : "test",
+              "path" : "",
+              "params" : {
+                "pageIndex" : "{{this.param}}"
+              },
+              "connectionName" : "HB_Pi_PipelineUse"
+            }
+          }
+        }, {
+          "name" : "param",
+          "expression" : {
+            "type" : "JavaScript",
+            "expression" : "return \"{{this.param}}\";"
+          }
+        } ],
+        "parameters" : {
+          "type" : "inline",
+          "model" : {
+            "name" : "params",
+            "tags" : [ ],
+            "attributes" : [ {
+              "attributeType" : "Internal",
+              "name" : "param",
+              "nullable" : false,
+              "required" : false,
+              "array" : false,
+              "internalType" : "String"
+            } ]
+          }
+        }
+      } ]
+    },
+    "conditions" : [ ],
+    "functions" : [ ],
+    "tags" : [ ],
+    "pipelines" : [ {
+      "name" : "PagingExample_PiEvent",
+      "tags" : [ "PagingExamples" ],
+      "inputStages" : [ "While_Read_1", "SetTop" ],
+      "stages" : [ {
+        "name" : "SetTop",
+        "display" : {
+          "position" : {
+            "x" : 277,
+            "y" : 284
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "let top = 1;\r\nstage.setMetadata(\"Top\", top);\r\nstage.setValue(event.value);\r\n\r\n"
+        },
+        "outputs" : [ "While_Read" ]
+      }, {
+        "name" : "While_Read",
+        "display" : {
+          "position" : {
+            "x" : 737,
+            "y" : 175
+          },
+          "size" : {
+            "width" : 1900,
+            "height" : 325
+          },
+          "metadata" : { }
+        },
+        "config" : {
+          "type" : ".WhileLoopConfig",
+          "failureOutputs" : [ ],
+          "loopOutputs" : [ "HasSkipInMetadata" ],
+          "stageTimeout" : {
+            "duration" : 7,
+            "units" : "Seconds"
+          },
+          "expression" : "// Accumulated Number Of Rows Is Greater Than Or Equal To Max Possible Number Row From Previous Loops\r\nreturn loop.value.length >= (loop.metadata.Top * (loop.runCount - 1));\r\n",
+          "loopValue" : "ACCUMULATED"
+        },
+        "outputs" : [ "PagingExampleMQTT" ]
+      }, {
+        "name" : "PagingExampleMQTT",
+        "display" : {
+          "position" : {
+            "x" : 2853,
+            "y" : 314
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.PagingExamplesMQTT}}",
+          "qualifier" : {
+            "topic" : "Loop2",
+            "qos" : 0,
+            "namedRoot" : false,
+            "retained" : false,
+            "breakupArrays" : false
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "While_Read_1",
+        "display" : {
+          "position" : {
+            "x" : 240,
+            "y" : -243
+          },
+          "size" : {
+            "width" : 1900,
+            "height" : 325
+          },
+          "metadata" : { }
+        },
+        "config" : {
+          "type" : ".WhileLoopConfig",
+          "failureOutputs" : [ ],
+          "loopOutputs" : [ "ReadPagedEvent" ],
+          "stageTimeout" : {
+            "duration" : 7,
+            "units" : "Seconds"
+          },
+          "expression" : "\r\n// Loop up to 5 times\r\nreturn Boolean(loop.metadata.flag!=\"STOP\");//true;//loop.runCount < 17\r\n// Accumulated Number Of Rows Is Greater Than Or Equal To Max Possible Number Row From Previous Loops\r\n//return loop.value.length >= (loop.metadata.Top * (loop.runCount - 1));\r\n",
+          "loopValue" : "LAST_RETURN"
+        },
+        "outputs" : [ "PagingExampleMQTT_2" ]
+      }, {
+        "name" : "SetNextSkips",
+        "display" : {
+          "position" : {
+            "x" : 650,
+            "y" : 50
+          },
+          "metadata" : {
+            "parent" : "While_Read"
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "let skip = event.metadata.Skip + event.metadata.Top;\r\nstage.setMetadata(\"Skip\", skip);\r\nstage.setValue(event.value);\r\n\r\n"
+        },
+        "outputs" : [ "ReadEvent" ]
+      }, {
+        "name" : "Return_3",
+        "display" : {
+          "position" : {
+            "x" : 1550,
+            "y" : 117
+          },
+          "metadata" : {
+            "parent" : "While_Read"
+          }
+        },
+        "config" : {
+          "type" : ".ReturnConfig"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "HasSkipInMetadata",
+        "display" : {
+          "position" : {
+            "x" : 200,
+            "y" : 117
+          },
+          "metadata" : {
+            "parent" : "While_Read"
+          }
+        },
+        "config" : {
+          "type" : ".SwitchConfig",
+          "switchCases" : [ {
+            "expression" : "return Boolean(event.metadata.hasOwnProperty('Skip'))",
+            "outputs" : [ "SetNextSkips" ],
+            "description" : "Value Is True"
+          }, {
+            "expression" : "return true",
+            "outputs" : [ "SetFirstSkip" ],
+            "description" : "Default"
+          } ],
+          "evaluationType" : "onFirst"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "ReadEvent",
+        "display" : {
+          "position" : {
+            "x" : 1100,
+            "y" : 117
+          },
+          "metadata" : {
+            "parent" : "While_Read"
+          }
+        },
+        "config" : {
+          "type" : ".ReadConfig",
+          "failureOutputs" : [ ],
+          "reference" : {
+            "type" : "Input",
+            "name" : "test",
+            "path" : "",
+            "params" : {
+              "pageIndex" : "{{event.metadata.Skip}}",
+              "pageSize" : "{{event.metadata.Top}}"
+            },
+            "connectionName" : "HB_Pi_PipelineUse2"
+          }
+        },
+        "outputs" : [ "Return_3" ]
+      }, {
+        "name" : "SetFirstSkip",
+        "display" : {
+          "position" : {
+            "x" : 650,
+            "y" : 185
+          },
+          "metadata" : {
+            "parent" : "While_Read"
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "let skip = 0;\r\nstage.setMetadata(\"Skip\", skip);\r\nstage.setValue(event.value);\r\n\r\n"
+        },
+        "outputs" : [ "ReadEvent" ]
+      }, {
+        "name" : "PushArray",
+        "display" : {
+          "position" : {
+            "x" : 1100,
+            "y" : 50
+          },
+          "metadata" : {
+            "parent" : "While_Read_1"
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "let arr = event.metadata.payload? event.metadata.payload:[];\r\narr = [...event.value.payload, ...arr];\r\nstage.setMetadata(\"payload\",arr)\r\nstage.setValue(arr);"
+        },
+        "outputs" : [ "Return_2" ]
+      }, {
+        "name" : "ReadPagedEvent",
+        "display" : {
+          "position" : {
+            "x" : 200,
+            "y" : 117
+          },
+          "metadata" : {
+            "parent" : "While_Read_1"
+          }
+        },
+        "config" : {
+          "type" : ".ReadConfig",
+          "failureOutputs" : [ ],
+          "reference" : {
+            "type" : "Instance",
+            "name" : "StageReads_Instance",
+            "path" : "",
+            "params" : {
+              "param" : "{{event.metadata.loopIndex}}"
+            }
+          }
+        },
+        "outputs" : [ "CheckInput" ]
+      }, {
+        "name" : "Return_2",
+        "display" : {
+          "position" : {
+            "x" : 1550,
+            "y" : 50
+          },
+          "metadata" : {
+            "parent" : "While_Read_1"
+          }
+        },
+        "config" : {
+          "type" : ".ReturnConfig"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "EndBound",
+        "display" : {
+          "position" : {
+            "x" : 1100,
+            "y" : 185
+          },
+          "metadata" : {
+            "parent" : "While_Read_1"
+          }
+        },
+        "config" : {
+          "type" : ".JavaScriptTransformConfig",
+          "transformExpression" : "stage.setMetadata(\"flag\",\"STOP\")\r\nstage.setValue(event.metadata.payload);\r\nstage.setMetadata(\"payload\",null)"
+        },
+        "outputs" : [ "Return_2" ]
+      }, {
+        "name" : "CheckInput",
+        "display" : {
+          "position" : {
+            "x" : 650,
+            "y" : 117
+          },
+          "metadata" : {
+            "parent" : "While_Read_1"
+          }
+        },
+        "config" : {
+          "type" : ".SwitchConfig",
+          "switchCases" : [ {
+            "expression" : "return Boolean(event.value.payload)",
+            "outputs" : [ "PushArray" ],
+            "description" : "Value Is True"
+          }, {
+            "expression" : "return true",
+            "outputs" : [ "EndBound" ],
+            "description" : "Default"
+          } ],
+          "evaluationType" : "onFirst"
+        },
+        "outputs" : [ ]
+      }, {
+        "name" : "PagingExampleMQTT_2",
+        "display" : {
+          "position" : {
+            "x" : 2266,
+            "y" : -129
+          }
+        },
+        "config" : {
+          "type" : ".DynamicWriteConfig",
+          "failureOutputs" : [ ],
+          "connectionReference" : "{{Connection.PagingExamplesMQTT}}",
+          "qualifier" : {
+            "topic" : "Loop1",
+            "qos" : 0,
+            "namedRoot" : false,
+            "retained" : false,
+            "breakupArrays" : false
+          },
+          "qualifierExpression" : "",
+          "writeReturn" : "ignore"
+        },
+        "outputs" : [ ]
+      } ],
+      "trackActivity" : true,
+      "triggers" : [ {
+        "name" : "PolledTrigger",
+        "display" : {
+          "position" : {
+            "x" : -450,
+            "y" : 0
+          }
+        },
+        "config" : {
+          "type" : ".TriggerPolled",
+          "enabled" : false,
+          "interval" : {
+            "duration" : 1,
+            "units" : "Days"
+          }
+        }
+      } ],
+      "errorHandler" : {
+        "type" : "default"
+      }
+    } ],
+    "namespace" : [ ]
+  },
+  "network" : {
+    "groups" : [ ],
+    "hubs" : [ ]
+  }
+}
