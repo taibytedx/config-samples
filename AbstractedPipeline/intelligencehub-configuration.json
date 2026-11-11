@@ -2,12 +2,12 @@
 	"productInfo": {
 		"company": "HighByte",
 		"product": "IntelligenceHub",
-		"version": "4.3.3",
-		"build": "2026.1.5.1",
+		"version": "4.5.3",
+		"build": "2026.10.9.1",
 		"stage": "Release"
 	},
 	"project": {
-		"version": 12,
+		"version": 15,
 		"connections": [
 			{
 				"name": "mqtt",
@@ -19,6 +19,14 @@
 				],
 				"writes": {
 					"flattenModeledValues": false
+				},
+				"writeThrottle": {
+					"enabled": false,
+					"maxBatchSizePerTarget": 1000,
+					"batchDelay": {
+						"duration": 20,
+						"units": "Milliseconds"
+					}
 				},
 				"subscriptions": {},
 				"storeForward": {
@@ -38,7 +46,8 @@
 					"ssl": false,
 					"redundantBrokers": [],
 					"maxInflight": 1000,
-					"inputDiscovery": ""
+					"inputDiscovery": "",
+					"maxMessagesReceived": 0
 				}
 			},
 			{
@@ -52,6 +61,14 @@
 				],
 				"writes": {
 					"flattenModeledValues": false
+				},
+				"writeThrottle": {
+					"enabled": false,
+					"maxBatchSizePerTarget": 1000,
+					"batchDelay": {
+						"duration": 20,
+						"units": "Milliseconds"
+					}
 				},
 				"subscriptions": {
 					"subscriptionRate": {
@@ -89,6 +106,14 @@
 				"writes": {
 					"flattenModeledValues": false
 				},
+				"writeThrottle": {
+					"enabled": false,
+					"maxBatchSizePerTarget": 1000,
+					"batchDelay": {
+						"duration": 20,
+						"units": "Milliseconds"
+					}
+				},
 				"subscriptions": {},
 				"storeForward": {
 					"enabled": false,
@@ -118,6 +143,14 @@
 				],
 				"writes": {
 					"flattenModeledValues": false
+				},
+				"writeThrottle": {
+					"enabled": false,
+					"maxBatchSizePerTarget": 1000,
+					"batchDelay": {
+						"duration": 20,
+						"units": "Milliseconds"
+					}
 				},
 				"subscriptions": {},
 				"storeForward": {
@@ -157,6 +190,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -179,6 +213,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -201,6 +236,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -223,6 +259,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -245,6 +282,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -276,6 +314,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -307,6 +346,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -338,6 +378,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -369,6 +410,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -400,6 +442,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -431,6 +474,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -462,6 +506,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -504,6 +549,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -517,9 +563,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -534,7 +583,7 @@
 						"duration": 0,
 						"units": "Seconds"
 					},
-					"isComplex": true,
+					"isComplex": false,
 					"identifier": {
 						"type": "NodeId",
 						"namespaceIndex": "2",
@@ -548,6 +597,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -572,6 +622,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -596,6 +647,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -620,6 +672,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -644,6 +697,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -676,6 +730,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -689,9 +744,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -738,6 +796,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -751,7 +810,9 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Motor002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							},
 							{
 								"attributeType": "Internal",
@@ -760,9 +821,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Amps",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -808,6 +872,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -855,6 +920,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -868,7 +934,9 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Motor002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							},
 							{
 								"attributeType": "Internal",
@@ -877,9 +945,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Amps",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -926,6 +997,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -939,7 +1011,9 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Motor002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							},
 							{
 								"attributeType": "Internal",
@@ -948,9 +1022,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Amps",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -997,6 +1074,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1035,14 +1113,15 @@
 					"params": [
 						{
 							"name": "assetId",
-							"pattern": "Motor001*4,Motor002*4,Motor003*4,Motor004*4,Motor005*4"
+							"pattern": "Motor001*4,Motor002*4,Motor003*4"
 						},
 						{
 							"name": "metric",
-							"pattern": "Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error"
+							"pattern": "Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error,Amps,Speed,Vibration,Error"
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1081,6 +1160,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1094,9 +1174,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Motor001",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -1114,7 +1197,7 @@
 					},
 					"ignoreBadQuality": false,
 					"browseVariableNodes": false,
-					"isComplex": false,
+					"isComplex": true,
 					"identifier": {
 						"type": "NodeId",
 						"namespaceIndex": "2",
@@ -1135,6 +1218,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1176,6 +1260,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1189,9 +1274,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "Motor004",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -1222,6 +1310,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1253,6 +1342,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1284,6 +1374,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1315,6 +1406,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1346,6 +1438,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1377,6 +1470,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1401,6 +1495,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1432,6 +1527,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1464,6 +1560,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1496,6 +1593,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1527,6 +1625,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1554,6 +1653,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1566,9 +1666,12 @@
 								"nullable": false,
 								"required": false,
 								"array": false,
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -1600,6 +1703,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1623,6 +1727,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1647,6 +1752,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1671,6 +1777,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1693,6 +1800,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1715,6 +1823,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1738,6 +1847,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1780,6 +1890,7 @@
 						}
 					]
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1803,6 +1914,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1826,6 +1938,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1839,9 +1952,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "motor002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -1864,6 +1980,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "EmptyParameters"
 				}
@@ -1887,6 +2004,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1900,9 +2018,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "motor002",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			},
@@ -1925,6 +2046,7 @@
 				"template": {
 					"type": "Off"
 				},
+				"referenceMap": [],
 				"parameters": {
 					"type": "inline",
 					"model": {
@@ -1938,9 +2060,12 @@
 								"required": false,
 								"array": false,
 								"defaultValue": "lastservice",
-								"internalType": "String"
+								"internalType": {
+									"variant": "String"
+								}
 							}
-						]
+						],
+						"modelVersion": ""
 					}
 				}
 			}
@@ -1979,7 +2104,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -1987,7 +2114,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -1995,7 +2124,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2003,7 +2134,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2011,7 +2144,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2019,7 +2154,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2027,7 +2164,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2035,9 +2174,12 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						}
-					]
+					],
+					"modelVersion": ""
 				},
 				{
 					"name": "MotorsNarrow",
@@ -2052,7 +2194,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2061,7 +2205,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Portland",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2070,7 +2216,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Area-1",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2079,7 +2227,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Line-1",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2087,7 +2237,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "DateTime"
+							"internalType": {
+								"variant": "DateTime"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2095,7 +2247,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2103,7 +2257,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "DateTime"
+							"internalType": {
+								"variant": "DateTime"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2111,7 +2267,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2119,7 +2277,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2127,9 +2287,12 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						}
-					]
+					],
+					"modelVersion": ""
 				},
 				{
 					"name": "MotorsWide",
@@ -2144,7 +2307,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2153,7 +2318,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Portland",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2162,7 +2329,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Area-1",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2171,7 +2340,9 @@
 							"required": false,
 							"array": false,
 							"defaultValue": "Line-1",
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2179,7 +2350,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Real64"
+							"internalType": {
+								"variant": "Real64"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2187,7 +2360,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Real64"
+							"internalType": {
+								"variant": "Real64"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2195,7 +2370,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Real64"
+							"internalType": {
+								"variant": "Real64"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2203,7 +2380,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "String"
+							"internalType": {
+								"variant": "String"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2211,7 +2390,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "DateTime"
+							"internalType": {
+								"variant": "DateTime"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2219,7 +2400,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "String"
+							"internalType": {
+								"variant": "String"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2227,9 +2410,12 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "DateTime"
+							"internalType": {
+								"variant": "DateTime"
+							}
 						}
-					]
+					],
+					"modelVersion": ""
 				},
 				{
 					"name": "SqlSource",
@@ -2243,7 +2429,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2251,7 +2439,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2259,7 +2449,9 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						},
 						{
 							"attributeType": "Internal",
@@ -2267,9 +2459,12 @@
 							"nullable": false,
 							"required": false,
 							"array": false,
-							"internalType": "Any"
+							"internalType": {
+								"variant": "Any"
+							}
 						}
-					]
+					],
+					"modelVersion": ""
 				}
 			],
 			"instances": [
@@ -2400,9 +2595,12 @@
 									"required": false,
 									"array": false,
 									"defaultValue": "Motor002",
-									"internalType": "String"
+									"internalType": {
+										"variant": "String"
+									}
 								}
-							]
+							],
+							"modelVersion": ""
 						}
 					}
 				},
@@ -2420,7 +2618,7 @@
 						"params": [
 							{
 								"name": "assetId",
-								"pattern": "Motor001,Motor002,Motor003,Motor004"
+								"pattern": "Motor001,Motor002,Motor003"
 							}
 						]
 					},
@@ -2618,9 +2816,12 @@
 									"required": false,
 									"array": false,
 									"defaultValue": "motor002",
-									"internalType": "String"
+									"internalType": {
+										"variant": "String"
+									}
 								}
-							]
+							],
+							"modelVersion": ""
 						}
 					}
 				},
@@ -2707,9 +2908,12 @@
 									"required": false,
 									"array": false,
 									"defaultValue": "Motor002",
-									"internalType": "String"
+									"internalType": {
+										"variant": "String"
+									}
 								}
-							]
+							],
+							"modelVersion": ""
 						}
 					}
 				},
@@ -2778,9 +2982,12 @@
 									"required": false,
 									"array": false,
 									"defaultValue": "Motor002",
-									"internalType": "String"
+									"internalType": {
+										"variant": "String"
+									}
 								}
-							]
+							],
+							"modelVersion": ""
 						}
 					}
 				},
@@ -2972,6 +3179,7 @@
 								"y": 2
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "stage.setValue(event.value);"
@@ -2980,6 +3188,7 @@
 					}
 				],
 				"trackActivity": true,
+				"queueSize": 10000,
 				"triggers": [
 					{
 						"name": "CallableTrigger",
@@ -2989,6 +3198,7 @@
 								"y": -1
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".TriggerCallable",
 							"enabled": false,
@@ -3022,6 +3232,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ModelConfig",
 							"model": "MotorsWide",
@@ -3105,7 +3316,8 @@
 										"expression": "//return System.Internal.DateTime;"
 									}
 								}
-							]
+							],
+							"expandArray": false
 						},
 						"outputs": [
 							"Return",
@@ -3121,6 +3333,7 @@
 								"y": 67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ErrorConfig",
 							"errorMessage": "Error {{event}}"
@@ -3135,6 +3348,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ReadConfig",
 							"failureOutputs": [
@@ -3147,7 +3361,9 @@
 								"params": {
 									"assetId": "{{this.assetId}}"
 								}
-							}
+							},
+							"handleGoodNoData": false,
+							"goodNoDataOutputs": []
 						},
 						"outputs": [
 							"GetSql_eventValue",
@@ -3163,6 +3379,7 @@
 								"y": -202
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ReturnConfig"
 						},
@@ -3176,10 +3393,13 @@
 								"y": 67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".DynamicWriteConfig",
 							"failureOutputs": [],
 							"connectionReference": "{{Connection.mqtt}}",
+							"eventPath": "",
+							"connectionType": "mqtt",
 							"qualifier": {
 								"topic": "Enterprise/Site/Area/Line/apiRequest/{{event.name}}",
 								"qos": 0,
@@ -3201,6 +3421,7 @@
 								"y": 135
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ErrorConfig",
 							"errorMessage": "Error {{event}}"
@@ -3215,6 +3436,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [
@@ -3249,6 +3471,7 @@
 								"y": -135
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "stage.setValue(event);"
@@ -3263,6 +3486,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "stage.setValue(event);"
@@ -3277,6 +3501,7 @@
 								"y": -270
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [],
@@ -3307,6 +3532,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "const eO = {\r\n\tassetId: \"Motor003\"\r\n};\r\nstage.setValue(eO);"
@@ -3323,6 +3549,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".SwitchConfig",
 							"switchCases": [
@@ -3340,8 +3567,7 @@
 									],
 									"description": "Default"
 								}
-							],
-							"evaluationType": "onFirst"
+							]
 						},
 						"outputs": []
 					},
@@ -3353,6 +3579,7 @@
 								"y": -242
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "stage.setValue(event.value);"
@@ -3361,6 +3588,7 @@
 					}
 				],
 				"trackActivity": true,
+				"queueSize": 10000,
 				"triggers": [
 					{
 						"name": "APITrigger",
@@ -3370,6 +3598,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".TriggerApi",
 							"enabled": false,
@@ -3385,9 +3614,12 @@
 											"nullable": false,
 											"required": false,
 											"array": false,
-											"internalType": "Any"
+											"internalType": {
+												"variant": "Any"
+											}
 										}
-									]
+									],
+									"modelVersion": ""
 								}
 							}
 						}
@@ -3398,7 +3630,7 @@
 				}
 			},
 			{
-				"name": "motorXxxServiceRecords_event",
+				"name": "motorXxxServiceRecords_eventInput",
 				"description": "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
 				"tags": [
 					"AbstractedPipeline",
@@ -3417,6 +3649,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "const fullString = event.metadata.source;\r\nconst startIndex = fullString.indexOf(\"(\") + 1;\r\nconst endIndex = fullString.lastIndexOf(\")\");\r\nconst extractedString = fullString.substring(startIndex, endIndex);\r\nconst resultObject = JSON.parse(extractedString);\r\nstage.setMetadata(\"parameters\",resultObject)"
@@ -3433,12 +3666,15 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".DynamicWriteConfig",
 							"failureOutputs": [],
 							"connectionReference": "{{Connection.mqtt}}",
+							"eventPath": "",
+							"connectionType": "mqtt",
 							"qualifier": {
-								"topic": "event/Enterprise/Site/Area/Line/{{event.name}}",
+								"topic": "event/Enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{event.name}}",
 								"qos": 0,
 								"namedRoot": false,
 								"retained": false,
@@ -3458,6 +3694,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ModelConfig",
 							"model": "MotorSource",
@@ -3520,7 +3757,8 @@
 										"expression": "return event.value._tagTimestamp;"
 									}
 								}
-							]
+							],
+							"expandArray": false
 						},
 						"outputs": [
 							"MergeRead"
@@ -3534,6 +3772,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [],
@@ -3566,6 +3805,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ModelConfig",
 							"model": "MotorsWide",
@@ -3576,7 +3816,7 @@
 									"name": "PRODUCT_motorId",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.machineId;"
+										"expression": "return event.value.SOURCE_machineId;"
 									}
 								},
 								{
@@ -3604,42 +3844,42 @@
 									"name": "PRODUCT_amps",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.amps;"
+										"expression": "return event.value.SOURCE_amps;"
 									}
 								},
 								{
 									"name": "PRODUCT_speed",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.speed;"
+										"expression": "return event.value.SOURCE_speed;"
 									}
 								},
 								{
 									"name": "PRODUCT_vibration",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.vibration;"
+										"expression": "return event.value.SOURCE_vibration;"
 									}
 								},
 								{
 									"name": "PRODUCT_error",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.error;"
+										"expression": "return event.value.SOURCE_error;"
 									}
 								},
 								{
 									"name": "PRODUCT_lastServiceDate",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.lastServiceDate;"
+										"expression": "return event.value.SOURCE_lastServiceDate;"
 									}
 								},
 								{
 									"name": "PRODUCT_lastServiceNotes",
 									"expression": {
 										"type": "JavaScript",
-										"expression": "return event.value.notes;"
+										"expression": "return event.value.SOURCE_notes;"
 									}
 								},
 								{
@@ -3649,7 +3889,8 @@
 										"expression": "return System.Internal.DateTime;"
 									}
 								}
-							]
+							],
+							"expandArray": false
 						},
 						"outputs": [
 							"MqttApi"
@@ -3663,6 +3904,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [],
@@ -3695,6 +3937,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".JavaScriptTransformConfig",
 							"transformExpression": "stage.setValue({...event.value.Source1, ...event.value.eventIn});"
@@ -3705,6 +3948,7 @@
 					}
 				],
 				"trackActivity": true,
+				"queueSize": 10000000,
 				"triggers": [
 					{
 						"name": "EventTrigger",
@@ -3714,10 +3958,18 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".TriggerEvent",
 							"enabled": true,
-							"reference": "{{Connection.opc.MotorXXX_PLC_template_event}}"
+							"reference": {
+								"type": "Input",
+								"name": "MotorXXX_PLC_template_event",
+								"path": "",
+								"params": {},
+								"connectionName": "opc"
+							},
+							"outputMode": "ALL"
 						}
 					}
 				],
@@ -3726,7 +3978,7 @@
 				}
 			},
 			{
-				"name": "motorXxxServiceRecords_template",
+				"name": "motorXxxServiceRecords_template_poll",
 				"description": "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
 				"tags": [
 					"AbstractedPipeline",
@@ -3738,30 +3990,14 @@
 				],
 				"stages": [
 					{
-						"name": "BreakupArray",
+						"name": "Error_3",
 						"display": {
 							"position": {
-								"x": 690,
-								"y": -67
+								"x": 1590,
+								"y": 0
 							}
 						},
-						"config": {
-							"type": ".BreakupConfig",
-							"breakupType": "array",
-							"depth": 1
-						},
-						"outputs": [
-							"GetSql"
-						]
-					},
-					{
-						"name": "Error_1",
-						"display": {
-							"position": {
-								"x": 690,
-								"y": 67
-							}
-						},
+						"description": "",
 						"config": {
 							"type": ".ErrorConfig",
 							"errorMessage": "Error {{event}}"
@@ -3776,6 +4012,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ReadConfig",
 							"failureOutputs": [
@@ -3786,11 +4023,56 @@
 								"name": "MotorSource_Instance_Templated",
 								"path": "",
 								"params": {}
-							}
+							},
+							"handleGoodNoData": false,
+							"goodNoDataOutputs": []
 						},
 						"outputs": [
 							"BreakupArray"
 						]
+					},
+					{
+						"name": "Mqtt",
+						"display": {
+							"position": {
+								"x": 2040,
+								"y": -135
+							}
+						},
+						"description": "",
+						"config": {
+							"type": ".DynamicWriteConfig",
+							"failureOutputs": [],
+							"connectionReference": "{{Connection.mqtt}}",
+							"eventPath": "",
+							"connectionType": "mqtt",
+							"qualifier": {
+								"qos": 0,
+								"namedRoot": false,
+								"retained": false,
+								"breakupArrays": false,
+								"topic": "poll/enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
+								"type": "Tag"
+							},
+							"qualifierExpression": "",
+							"writeReturn": "ignore"
+						},
+						"outputs": []
+					},
+					{
+						"name": "Error_1",
+						"display": {
+							"position": {
+								"x": 690,
+								"y": 67
+							}
+						},
+						"description": "",
+						"config": {
+							"type": ".ErrorConfig",
+							"errorMessage": "Error {{event}}"
+						},
+						"outputs": []
 					},
 					{
 						"name": "GetSql",
@@ -3800,6 +4082,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [
@@ -3834,6 +4117,7 @@
 								"y": -135
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ModelConfig",
 							"model": "MotorsWide",
@@ -3917,117 +4201,13 @@
 										"expression": "return System.Internal.DateTime;"
 									}
 								}
-							]
+							],
+							"expandArray": false
 						},
 						"outputs": [
-							"Mqtt",
-							"Sparkplug"
+							"Mqtt"
 						]
 					},
-					{
-						"name": "Error_3",
-						"display": {
-							"position": {
-								"x": 1590,
-								"y": 0
-							}
-						},
-						"config": {
-							"type": ".ErrorConfig",
-							"errorMessage": "Error {{event}}"
-						},
-						"outputs": []
-					},
-					{
-						"name": "Mqtt",
-						"display": {
-							"position": {
-								"x": 2040,
-								"y": -202
-							}
-						},
-						"config": {
-							"type": ".DynamicWriteConfig",
-							"failureOutputs": [],
-							"connectionReference": "{{Connection.mqtt}}",
-							"qualifier": {
-								"qos": 0,
-								"namedRoot": false,
-								"retained": false,
-								"breakupArrays": false,
-								"topic": "enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
-								"type": "Tag"
-							},
-							"qualifierExpression": "",
-							"writeReturn": "ignore"
-						},
-						"outputs": []
-					},
-					{
-						"name": "Sparkplug",
-						"display": {
-							"position": {
-								"x": 2040,
-								"y": -67
-							}
-						},
-						"config": {
-							"type": ".DynamicWriteConfig",
-							"failureOutputs": [],
-							"connectionReference": "{{Connection.spb}}",
-							"qualifier": {
-								"messageType": "Data",
-								"deviceId": "{{this.PRODUCT_motorId}}",
-								"timestamp": "",
-								"publishType": "Tag",
-								"breakupArrays": false,
-								"groupId": "{{this.PRODUCT_site}}",
-								"edgeNodeId": "{{this.PRODUCT_area}}.{{this.PRODUCT_line}}",
-								"type": "Tag"
-							},
-							"qualifierExpression": "",
-							"writeReturn": "ignore"
-						},
-						"outputs": []
-					}
-				],
-				"trackActivity": true,
-				"triggers": [
-					{
-						"name": "PolledTrigger",
-						"display": {
-							"position": {
-								"x": -450,
-								"y": 0
-							}
-						},
-						"config": {
-							"type": ".TriggerPolled",
-							"enabled": true,
-							"interval": {
-								"duration": 10,
-								"units": "Seconds"
-							}
-						}
-					}
-				],
-				"errorHandler": {
-					"type": "external",
-					"reference": "{{Pipeline.ErrorOperator}}"
-				}
-			},
-			{
-				"name": "motorXxxServiceRecords_template_batch",
-				"description": "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
-				"tags": [
-					"AbstractedPipeline",
-					"starter_solution",
-					"mcp"
-				],
-				"inputStages": [
-					"GetOpcBranch"
-				],
-				"stages": [
 					{
 						"name": "BreakupArray",
 						"display": {
@@ -4036,6 +4216,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".BreakupConfig",
 							"breakupType": "array",
@@ -4044,245 +4225,10 @@
 						"outputs": [
 							"GetSql"
 						]
-					},
-					{
-						"name": "Error_1",
-						"display": {
-							"position": {
-								"x": 690,
-								"y": 67
-							}
-						},
-						"config": {
-							"type": ".ErrorConfig",
-							"errorMessage": "Error {{event}}"
-						},
-						"outputs": []
-					},
-					{
-						"name": "GetOpcBranch",
-						"display": {
-							"position": {
-								"x": 240,
-								"y": 0
-							}
-						},
-						"config": {
-							"type": ".ReadConfig",
-							"failureOutputs": [
-								"Error_1"
-							],
-							"reference": {
-								"type": "Instance",
-								"name": "MotorSource_Instance_Templated",
-								"path": "",
-								"params": {}
-							}
-						},
-						"outputs": [
-							"BreakupArray"
-						]
-					},
-					{
-						"name": "GetSql",
-						"display": {
-							"position": {
-								"x": 1140,
-								"y": -67
-							}
-						},
-						"config": {
-							"type": ".MergeReadConfig",
-							"failureOutputs": [
-								"Error_3"
-							],
-							"keyReferences": [
-								{
-									"location": "inline",
-									"key": "Source1",
-									"reference": {
-										"type": "Instance",
-										"name": "SqlSource_Instance",
-										"path": "",
-										"params": {
-											"assetId": "{{event.value.SOURCE_assetId}}"
-										}
-									}
-								}
-							],
-							"inputValueLocation": "inline",
-							"inputValueKey": "eventIn"
-						},
-						"outputs": [
-							"DataProduct"
-						]
-					},
-					{
-						"name": "DataProduct",
-						"display": {
-							"position": {
-								"x": 1590,
-								"y": -135
-							}
-						},
-						"config": {
-							"type": ".ModelConfig",
-							"model": "MotorsWide",
-							"objectName": "{{this.assetId}}",
-							"initExpression": "",
-							"attributes": [
-								{
-									"name": "PRODUCT_motorId",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_machineId;"
-									}
-								},
-								{
-									"name": "PRODUCT_site",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return System.Variables.Site;"
-									}
-								},
-								{
-									"name": "PRODUCT_area",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return System.Variables.Area;"
-									}
-								},
-								{
-									"name": "PRODUCT_line",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return System.Variables.Line;"
-									}
-								},
-								{
-									"name": "PRODUCT_amps",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_amps;"
-									}
-								},
-								{
-									"name": "PRODUCT_speed",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_speed;"
-									}
-								},
-								{
-									"name": "PRODUCT_vibration",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_vibration;"
-									}
-								},
-								{
-									"name": "PRODUCT_error",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_error;"
-									}
-								},
-								{
-									"name": "PRODUCT_lastServiceDate",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_lastServiceDate;"
-									}
-								},
-								{
-									"name": "PRODUCT_lastServiceNotes",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return event.value.SOURCE_notes;"
-									}
-								},
-								{
-									"name": "_timestamp",
-									"expression": {
-										"type": "JavaScript",
-										"expression": "return System.Internal.DateTime;"
-									}
-								}
-							]
-						},
-						"outputs": [
-							"Mqtt",
-							"Sparkplug"
-						]
-					},
-					{
-						"name": "Error_3",
-						"display": {
-							"position": {
-								"x": 1590,
-								"y": 0
-							}
-						},
-						"config": {
-							"type": ".ErrorConfig",
-							"errorMessage": "Error {{event}}"
-						},
-						"outputs": []
-					},
-					{
-						"name": "Mqtt",
-						"display": {
-							"position": {
-								"x": 2040,
-								"y": -202
-							}
-						},
-						"config": {
-							"type": ".DynamicWriteConfig",
-							"failureOutputs": [],
-							"connectionReference": "{{Connection.mqtt}}",
-							"qualifier": {
-								"qos": 0,
-								"namedRoot": false,
-								"retained": false,
-								"breakupArrays": false,
-								"topic": "enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
-								"type": "Tag"
-							},
-							"qualifierExpression": "",
-							"writeReturn": "ignore"
-						},
-						"outputs": []
-					},
-					{
-						"name": "Sparkplug",
-						"display": {
-							"position": {
-								"x": 2040,
-								"y": -67
-							}
-						},
-						"config": {
-							"type": ".DynamicWriteConfig",
-							"failureOutputs": [],
-							"connectionReference": "{{Connection.spb}}",
-							"qualifier": {
-								"messageType": "Data",
-								"deviceId": "{{this.PRODUCT_motorId}}",
-								"timestamp": "",
-								"publishType": "Tag",
-								"breakupArrays": false,
-								"groupId": "{{this.PRODUCT_site}}",
-								"edgeNodeId": "{{this.PRODUCT_area}}.{{this.PRODUCT_line}}",
-								"type": "Tag"
-							},
-							"qualifierExpression": "",
-							"writeReturn": "ignore"
-						},
-						"outputs": []
 					}
 				],
 				"trackActivity": true,
+				"queueSize": 10000,
 				"triggers": [
 					{
 						"name": "PolledTrigger",
@@ -4292,13 +4238,15 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".TriggerPolled",
 							"enabled": false,
 							"interval": {
 								"duration": 10,
 								"units": "Seconds"
-							}
+							},
+							"mode": "interval"
 						}
 					}
 				],
@@ -4308,7 +4256,7 @@
 				}
 			},
 			{
-				"name": "motorXxxServiceRecords_template_cachedLUT",
+				"name": "motorXxxServiceRecords_template_poll_cachedContext",
 				"description": "Request motor asset telemetry and last service records. Format request body as {\"assetId\":\"001\"} where the assetId value can range from \"001\" and above.",
 				"tags": [
 					"AbstractedPipeline",
@@ -4327,6 +4275,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".BreakupConfig",
 							"breakupType": "array",
@@ -4344,6 +4293,7 @@
 								"y": 67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ErrorConfig",
 							"errorMessage": "Error {{event}}"
@@ -4358,6 +4308,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ReadConfig",
 							"failureOutputs": [
@@ -4368,7 +4319,9 @@
 								"name": "MotorSource_Instance_Templated",
 								"path": "",
 								"params": {}
-							}
+							},
+							"handleGoodNoData": false,
+							"goodNoDataOutputs": []
 						},
 						"outputs": [
 							"BreakupArray"
@@ -4382,6 +4335,7 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".MergeReadConfig",
 							"failureOutputs": [
@@ -4416,6 +4370,7 @@
 								"y": -135
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ModelConfig",
 							"model": "MotorsWide",
@@ -4499,7 +4454,8 @@
 										"expression": "return System.Internal.DateTime;"
 									}
 								}
-							]
+							],
+							"expandArray": false
 						},
 						"outputs": [
 							"Mqtt",
@@ -4514,6 +4470,7 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".ErrorConfig",
 							"errorMessage": "Error {{event}}"
@@ -4528,16 +4485,19 @@
 								"y": -202
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".DynamicWriteConfig",
 							"failureOutputs": [],
 							"connectionReference": "{{Connection.mqtt}}",
+							"eventPath": "",
+							"connectionType": "mqtt",
 							"qualifier": {
 								"qos": 0,
 								"namedRoot": false,
 								"retained": false,
 								"breakupArrays": false,
-								"topic": "enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
+								"topic": "cached/enterprise/{{this.PRODUCT_site}}/{{this.PRODUCT_area}}/{{this.PRODUCT_line}}/{{this.PRODUCT_motorId}}",
 								"type": "Tag"
 							},
 							"qualifierExpression": "",
@@ -4553,10 +4513,13 @@
 								"y": -67
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".DynamicWriteConfig",
 							"failureOutputs": [],
 							"connectionReference": "{{Connection.spb}}",
+							"eventPath": "",
+							"connectionType": "sparkplug",
 							"qualifier": {
 								"messageType": "Data",
 								"deviceId": "{{this.PRODUCT_motorId}}",
@@ -4574,6 +4537,7 @@
 					}
 				],
 				"trackActivity": true,
+				"queueSize": 10000,
 				"triggers": [
 					{
 						"name": "PolledTrigger",
@@ -4583,13 +4547,15 @@
 								"y": 0
 							}
 						},
+						"description": "",
 						"config": {
 							"type": ".TriggerPolled",
 							"enabled": false,
 							"interval": {
 								"duration": 10,
 								"units": "Seconds"
-							}
+							},
+							"mode": "interval"
 						}
 					}
 				],
@@ -4599,7 +4565,18 @@
 				}
 			}
 		],
-		"namespace": []
+		"namespace": [],
+		"lookupMap": [],
+		"servers": {
+			"i3x": {
+				"historyReadPipeline": {
+					"type": "Empty"
+				},
+				"writePipeline": {
+					"type": "Empty"
+				}
+			}
+		}
 	},
 	"network": {
 		"groups": [],
